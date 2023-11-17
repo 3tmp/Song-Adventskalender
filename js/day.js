@@ -1,9 +1,11 @@
+import { SongDatabase } from "./Database.js";
+
 /**
  * Get the calendar day from the url
  * @returns {Number} The number on success or `NaN` on failure
  */
 export function getDayFromUrl() {
-    let parameter = window.location.search;
+    const parameter = window.location.search;
     if (parameter.length == 0) {
         return Number.NaN;
     }
@@ -12,11 +14,15 @@ export function getDayFromUrl() {
         return Number.NaN;
     }
 
-    let day = Number(parameter.substring(5));
+    const day = Number(parameter.substring(5));
 
     if (Number.isNaN(day) || day < 1 || day > 24) {
         return Number.NaN;
     }
 
     return day;
+}
+
+export function getSong(day) {
+    return SongDatabase.getSong(day);
 }

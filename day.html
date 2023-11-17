@@ -8,44 +8,45 @@
 </head>
 <body>
     <div>
-        <p>
+        <h1 id="songQuote"></h1>
+        <h2 id="songExplaination"></h2>
 
-        </p>
+        <h3 id="songTitle"></h3>
+        <h3 id="songArtist"></h3>
+
+        <div id="songYoutubeContainer"></div>
+        <div id="songSpotifyContainer"></div>
     </div>
 
 
     <script type="module">
-        import { getDayFromUrl, fetchSongs, selectSongForCurrentDay, storeSongByIndex } from "./js/day.js"
+        import { getDayFromUrl, getSong } from "./js/day.js";
 
         const day = getDayFromUrl();
 
-        const el = document.querySelector("body div p");
-
         if (Number.isNaN(day)) {
-            el.innerHTML = "Error";
+            document.querySelector("body").innerHTML = "Error";
             throw Error("No valid day");
         }
 
-        el.innerHTML = "The current day is " + day;
+        /** @type {Song} */
+        const song = getSong(day);
+
         document.title = "Adventskalender Tag " + day;
 
-        await populate();
+        const songQuote = document.getElementById("songQuote");
+        const songExplaination = document.getElementById("songExplaination");
+        const songTitle = document.getElementById("songTitle");
+        const songArtist = document.getElementById("songArtist");
+        const songYoutubeContainer = document.getElementById("songYoutubeContainer");
+        const songSpotifyContainer = document.getElementById("songSpotifyContainer");
 
-        async function populate() {
-            const songs = await fetchSongs("songs.json");
-
-            const el = document.querySelector("body div p");
-
-            songs.forEach(song => {
-                const songContainer = document.createElement("div");
-                songContainer.innerText = song.toString();
-                el.appendChild(songContainer);
-            });
-
-            const selected = selectSongForCurrentDay(songs);
-
-            //storeSongByIndex(day, songs, selected);
-        }
+        songQuote.innerText = song.quote;
+        songExplaination.innerText = song.explaination;
+        songTitle.innerText = song.title;
+        songArtist.innerText = song.artist;
+        songYoutubeContainer.innerText = song.youtubeLink;
+        songSpotifyContainer.innerText = song.spotifyLink;
 
     </script>
 </body>

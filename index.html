@@ -38,9 +38,9 @@
         if (isFirstLoad()) {
             await buildSongDatabase(true);
         }
-        
-        //buildCalendar(container, songs);
 
+        // Now we can be sure that the database contains 24 entries
+        buildCalendar(container);
 
         async function buildSongDatabase(overwriteExisting) {
             if (overwriteExisting) {
