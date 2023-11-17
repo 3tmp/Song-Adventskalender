@@ -13,6 +13,10 @@ export class Song {
         return "https://www.youtube.com/watch?v=" + this.youtubeId;
     }
 
+    get youtubeEmbedLink() {
+        return "https://www.youtube-nocookie.com/embed/" + this.youtubeId;
+    }
+
     get spotifyLink() {
         return "https://open.spotify.com/whatever" + this.spotifyId;
     }
