@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventskalender</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="CalendarContainer">
+    </div>
+
+
+    <script type="module" src="js/Song.js"></script>
+    <script type="module" src="js/Database.js"></script>
+    <script type="module" src="js/index.js"></script>
+
+    <script type="module">
+        import { buildCalendar } from "./js/index.js";
+
+        let container = document.getElementById("CalendarContainer");
+
+        buildCalendar(container);
+
+    </script>
+</body>
+</html>
