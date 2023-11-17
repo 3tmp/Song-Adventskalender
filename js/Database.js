@@ -1,28 +1,16 @@
 import { Song } from "./Song.js";
 
+export class Database {
+
+    static clear() {
+        window.localStorage.clear();
+    }
+}
+
 export class SongDatabase {
 
-    static #keyPrefix = ""; //"song_";
-    static #dayPrefix = "day";
-
-    /**
-     * Determines if the given `Song` is already in the database.
-     * @param {Song} song The song to check
-     * @returns {boolean} true if the song is already in the database, false otherwise
-     */
-    static containsSong(song) {
-        this.#ensureSong(song);
-
-        for (var i = 0; i < window.localStorage.length; i++) {
-            const item = window.localStorage.getItem(window.localStorage.key(i));
-            const deserializedSong = Song.deserialize(item);
-
-            if (deserializedSong.equals(song)) {
-                return true;
-            }
-        }
-        return false;
-    }
+    static #keyPrefix = "song_";
+    static #dayPrefix = "day_";
 
     /**
      * Serializes the `song` and stores it in the database. 
@@ -33,7 +21,7 @@ export class SongDatabase {
     static storeSong(day, song) {
         this.#ensureSong(song);
 
-        const key = SongDatabase.#keyPrefix + SongDatabase.#dayPrefix + day;
+        const key = SongDatabase.#keyPrefix + SongDatabase.#dayPrefix + String(day);
         if (window.localStorage.getItem(key) != null) {
             throw Error("The database already contains a song for day " + day);
         }
@@ -56,7 +44,7 @@ export class SongDatabase {
     /**
      * Removes all songs from the database.
      */
-    static clear() {
+    static clearSongs() {
         const keys = [];
         SongDatabase.#enumSongs((day, _) => {
             keys.push(day);
@@ -64,7 +52,7 @@ export class SongDatabase {
         });
 
         const prefix = SongDatabase.#keyPrefix + SongDatabase.#dayPrefix;
-        keys.forEach((day) => window.localStorage.removeItem(prefix + day));
+        keys.forEach((day) => window.localStorage.removeItem(prefix + String(day)));
     }
 
     /**
@@ -85,14 +73,16 @@ export class SongDatabase {
      * Only for debugging purposes.
      */
     static print() {
-        let songCount = 0;
-        SongDatabase.#enumSongs((_, song) => {
-            songCount++;
-            console.log(song);
+        const songs = [];
+        SongDatabase.#enumSongs((day, song) => {
+            songs.push({day: day, song: song});
             return true;
         });
 
-        console.log(songCount + " songs in database.");
+        songs.sort((a, b) => a.day - b.day);
+        songs.forEach((obj) => console.log(obj.day + ": " + obj.song.toString()));
+
+        console.log(songs.length + " songs in database.");
     }
 
     /**

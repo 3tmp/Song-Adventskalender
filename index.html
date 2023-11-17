@@ -10,17 +10,58 @@
     <div id="CalendarContainer">
     </div>
 
+    <div>
+        <button id="clearAllBtn">Clear Database</button>
+        <button id="printBtn">Print SongDatabase</button>
+    </div>
+
 
     <script type="module" src="js/Song.js"></script>
     <script type="module" src="js/Database.js"></script>
     <script type="module" src="js/index.js"></script>
 
     <script type="module">
-        import { buildCalendar } from "./js/index.js";
+        import { buildCalendar, shuffleArray, fetchSongs, isFirstLoad } from "./js/index.js";
+        import { Database, SongDatabase } from "./js/Database.js";
 
         let container = document.getElementById("CalendarContainer");
 
-        buildCalendar(container);
+        document.getElementById("clearAllBtn").addEventListener("click", () => {
+            Database.clear();
+            console.log("Cleared full database");
+        });
+
+        document.getElementById("printBtn").addEventListener("click", () => {
+            SongDatabase.print();
+        });
+
+        if (isFirstLoad()) {
+            await buildSongDatabase(true);
+        }
+        
+        //buildCalendar(container, songs);
+
+
+        async function buildSongDatabase(overwriteExisting) {
+            if (overwriteExisting) {
+                SongDatabase.clearSongs();
+            }
+            else if (!SongDatabase.isEmpty()) {
+                throw Error("Song database already contains items");
+            }
+
+            /** @type {Array} */
+            const songs = await fetchSongs("songs.json");
+
+            // Each user should have a random order
+            shuffleArray(songs);
+
+            // Store the songs in the database
+            songs.forEach((song, index) => {
+                const day = index + 1;
+                SongDatabase.storeSong(day, song);
+            });
+        }
 
     </script>
 </body>

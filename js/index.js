@@ -1,3 +1,6 @@
+import { Song } from "./Song.js";
+import { SongDatabase } from "./Database.js";
+
 /**
  * Builds the 24 adventcalendar "doors" and inserts them into the `parentElement`
  * @param {HTMLElement} parentElement The container element for the "doors"
@@ -16,5 +19,48 @@ export function buildCalendar(parentElement) {
         dayLink.appendChild(dayText);
         dayContainer.appendChild(dayLink);
         parentElement.appendChild(dayContainer);
+    }
+}
+
+/**
+ * Loads the songs from the webserver
+ * @param {string} requestUrl The url of the json file
+ * @returns {Array[Song]}
+ */
+export async function fetchSongs(requestUrl) {
+    const request = new Request(requestUrl, {cache: "default"});
+
+    const response = await fetch(request);
+    const result = await response.json();
+
+    return result.map((song) => new Song(song));
+}
+
+/**
+ * Determines if this is the very frist load of the website (= no songs stored)
+ * @returns {boolean} true if it is the first load, false otherwise
+ */
+export function isFirstLoad() {
+    return SongDatabase.isEmpty();
+}
+
+/**
+ * Shuffles the given array using the Fisher-Yates algorithm
+ * @param {Array} array The array to shuffle (in place)
+ */
+export function shuffleArray(array) {
+    let currentIndex = array.length;
+    let randomIndex;
+  
+    // While there remain elements to shuffle.
+    while (currentIndex > 0) {
+  
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
     }
 }
