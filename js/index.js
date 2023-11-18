@@ -28,7 +28,10 @@ export function buildCalendar(parentElement) {
  * @returns {Array[Song]}
  */
 export async function fetchSongs(requestUrl) {
-    const request = new Request(requestUrl, {cache: "default"});
+    // We don't want to cache the file, this helps us to deploy updates
+    // if the local storage get cleared. In any case the fetching will
+    // only be done once when the webpage loads the first time
+    const request = new Request(requestUrl, {cache: "no-store"});
 
     const response = await fetch(request);
     const result = await response.json();
