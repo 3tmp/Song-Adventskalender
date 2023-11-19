@@ -6,19 +6,22 @@ import { SongDatabase } from "./Database.js";
  * @param {HTMLElement} parentElement The container element for the "doors"
  */
 export function buildCalendar(parentElement) {
+
+    // When we are generating the calendar, there will be only one CalendarItem (and it's hidden)
+    const bluePrint = document.getElementsByClassName("CalendarItem")[0];
+
     for (let i = 0; i < 24; i++) {
-        let dayContainer = document.createElement("div");
-        dayContainer.classList.add("CalendarItemContainer");
+        const calendarItem = bluePrint.cloneNode(true);
 
-        let dayLink = document.createElement("a");
-        dayLink.href = "day.html?day=" + (i + 1);
+        const link = calendarItem.querySelector("a");
+        link.href = "day.html?day=" + (i + 1);
 
-        let dayText = document.createElement("p");
-        dayText.innerText = "Tag " + (i + 1);
-
-        dayLink.appendChild(dayText);
-        dayContainer.appendChild(dayLink);
-        parentElement.appendChild(dayContainer);
+        const inner = calendarItem.querySelector("a > p");
+        inner.innerText = "Tag " + (i + 1);
+        
+        parentElement.appendChild(calendarItem);
+        // Now show the item
+        calendarItem.style.display = "block";
     }
 }
 

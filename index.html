@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="CalendarContainer">
+
+    <!-- The (hidden) blueprint for a single calendar element -->
+    <div class="CalendarItem" style="display: none;">
+        <a>
+            <p></p>
+        </a>
     </div>
 
     <div>
@@ -15,6 +20,9 @@
         <button id="printBtn">Print SongDatabase</button>
     </div>
 
+    <!-- Will host all calendar elements -->
+    <div id="CalendarContainer">
+    </div>
 
     <script type="module" src="js/Song.js"></script>
     <script type="module" src="js/Database.js"></script>
