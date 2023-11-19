@@ -24,18 +24,36 @@
                     allowfullscreen>
             </iframe>
         </div>
-        <div id="songSpotifyContainer"></div>
+        <div id="songSpotifyContainer">
+            <iframe style="border-radius:12px"
+                    src=""
+                    width="100%"
+                    height="152"
+                    frameBorder="0"
+                    allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy">
+            </iframe>
+        </div>
     </div>
 
 
     <script type="module">
-        import { getDayFromUrl, getSong } from "./js/day.js";
+        import { getDayFromUrl, getSong, isAllowedDay } from "./js/day.js";
+        import { isInDevMode } from "./js/index.js";
 
         const day = getDayFromUrl();
 
         if (Number.isNaN(day)) {
             document.querySelector("body").innerHTML = "Error";
             throw Error("No valid day");
+        }
+        console.log("Selected day is " + day);
+
+        if (!isAllowedDay(day)) {
+            const body = document.querySelector("body > div");
+            body.innerHTML = "<h1>Um dieses Türchen zu öffnen, musst du dich noch ein bisschen gedulden 😉</h1>";
+            throw Error("Not allowed yet");
         }
 
         /** @type {Song} */
@@ -54,8 +72,16 @@
         songExplaination.innerText = song.explaination;
         songTitle.innerText = song.title;
         songArtist.innerText = song.artist;
-        songYoutubeContainer.querySelector("iframe").src = song.youtubeEmbedLink;
-        songSpotifyContainer.innerText = song.spotifyLink;
+
+        // Only embed the youtube/spotify links if not in dev mode
+        if (!isInDevMode()) {
+            songYoutubeContainer.querySelector("iframe").src = song.youtubeEmbedLink;
+            songSpotifyContainer.querySelector("iframe").src = song.spotifyEmbedLink;
+        }
+        else {
+            songYoutubeContainer.innerHTML = "<div class='YoutubeDev'>Youtube</div>";
+            songSpotifyContainer.innerHTML = "<div class='SpotifyDev'>Spotify</div>";
+        }
 
     </script>
 </body>

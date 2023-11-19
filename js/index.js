@@ -67,3 +67,11 @@ export function shuffleArray(array) {
         array[randomIndex], array[currentIndex]];
     }
 }
+
+/**
+ * Determines if the website is currently in dev mode
+ * @returns {boolean} true if in dev, false if in prod
+ */
+export function isInDevMode() {
+    return window.location.hostname.includes("127.0.0.1");
+}

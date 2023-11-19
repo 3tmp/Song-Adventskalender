@@ -1,4 +1,5 @@
 import { SongDatabase } from "./Database.js";
+import { isInDevMode } from "./index.js";
 
 /**
  * Get the calendar day from the url
@@ -25,4 +26,11 @@ export function getDayFromUrl() {
 
 export function getSong(day) {
     return SongDatabase.getSong(day);
+}
+
+export function isAllowedDay(day) {
+    // If we are in dev mode, we set the month to November, but in prod, we really use december
+    const december = isInDevMode() ? 10 : 11;
+    const year = 2023;
+    return new Date() >= new Date(year, december, day);
 }

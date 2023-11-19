@@ -18,7 +18,11 @@ export class Song {
     }
 
     get spotifyLink() {
-        return "https://open.spotify.com/whatever" + this.spotifyId;
+        return "https://open.spotify.com/intl-de/track/" + this.spotifyId;
+    }
+
+    get spotifyEmbedLink() {
+        return "https://open.spotify.com/embed/track/" + this.spotifyId;
     }
 
     equals(obj) {
