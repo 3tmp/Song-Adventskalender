@@ -24,7 +24,7 @@ body {
 .CalendarItem {
     margin: 10px;
     height: 200px;
-    width: 100px;
+    width: 150px;
     background-color: brown;
     padding: 0;
     display: flex;
@@ -56,13 +56,15 @@ body {
     width: 100%;
 }
 
-.CalendarItem > a > p {
-    margin: 0;
-}
-
 .CalendarItemTop img {
     height: 100%;
     width: 100%;
+}
+
+.CalendarItemBottom h5 {
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .YoutubeDev {
