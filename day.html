@@ -39,7 +39,7 @@
 
 
     <script type="module">
-        import { getDayFromUrl, getSong, isAllowedDay } from "./js/day.js";
+        import { getDayFromUrl, getSong, isAllowedDay, setDoorOpened } from "./js/day.js";
         import { isInDevMode } from "./js/index.js";
 
         const day = getDayFromUrl();
@@ -55,6 +55,9 @@
             body.innerHTML = "<h1>Um dieses Türchen zu öffnen, musst du dich noch ein bisschen gedulden 😉</h1>";
             throw Error("Not allowed yet");
         }
+
+        // Set the door as opened
+        setDoorOpened(day);
 
         /** @type {Song} */
         const song = getSong(day);

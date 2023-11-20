@@ -1,4 +1,4 @@
-import { SongDatabase } from "./Database.js";
+import { DoorDatabase, SongDatabase } from "./Database.js";
 import { isInDevMode } from "./index.js";
 
 /**
@@ -33,4 +33,8 @@ export function isAllowedDay(day) {
     const december = isInDevMode() ? 10 : 11;
     const year = 2023;
     return new Date() >= new Date(year, december, day);
+}
+
+export function setDoorOpened(day) {
+    DoorDatabase.setDoorOpened(day);
 }

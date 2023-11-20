@@ -1,5 +1,5 @@
 import { Song } from "./Song.js";
-import { SongDatabase } from "./Database.js";
+import { DoorDatabase, SongDatabase } from "./Database.js";
 
 /**
  * Builds the 24 adventcalendar "doors" and inserts them into the `parentElement`
@@ -18,6 +18,8 @@ export function buildCalendar(parentElement) {
 
         //const inner = calendarItem.querySelector("a > p");
         //inner.innerText = "Tag " + (i + 1);
+
+        // TODO set the values of the song and if the door is allowed and already opened
         
         parentElement.appendChild(calendarItem);
         // Now show the item

@@ -7,6 +7,59 @@ export class Database {
     }
 }
 
+export class DoorDatabase {
+
+    static #keyPrefix = "door_";
+    static #dayPrefix = "day_";
+
+    static initDoors() {
+        const prefix = DoorDatabase.#keyPrefix + DoorDatabase.#dayPrefix;
+
+        for (let i = 0; i < 24; i++) {
+            // Set an empty string, because `false` gets serialized to "false" which evaluates to `true`
+            window.localStorage.setItem(prefix + String(i + 1), "");
+        }
+    }
+
+    static setDoorOpened(day) {
+        if (day < 1 || day > 24) {
+            throw Error("Invalid day range");
+        }
+        const key = DoorDatabase.#keyPrefix + DoorDatabase.#dayPrefix + String(day);
+        window.localStorage.setItem(key, true);
+    }
+
+    static print() {
+        const doors = [];
+        DoorDatabase.#enumDoors((day, opened) => {
+            doors.push({day: day, opened: opened});
+            return true;
+        });
+
+        doors.sort((a, b) => a.day - b.day);
+        doors.forEach((obj) => console.log(obj.day + " is opened: " + obj.opened));
+
+        console.log(doors.length + " doors in database.");
+    }
+
+    /**
+     * Enumerates all doors and whether they are already opened
+     * @param {function(number, boolean): boolean} callback
+     */
+    static #enumDoors(callback) {
+        for (var i = 0; i < window.localStorage.length; i++) {
+            const key = window.localStorage.key(i);
+            if (key.startsWith(DoorDatabase.#keyPrefix)) {
+                const opened = Boolean(window.localStorage.getItem(key));
+                const day = Number(key.replace(DoorDatabase.#keyPrefix + DoorDatabase.#dayPrefix, ""));
+                if (!callback(day, opened)) {
+                    return;
+                }
+            }
+        }
+    }
+}
+
 export class SongDatabase {
 
     static #keyPrefix = "song_";

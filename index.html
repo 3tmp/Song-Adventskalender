@@ -23,7 +23,7 @@
 
     <div>
         <button id="clearAllBtn">Clear Database</button>
-        <button id="printBtn">Print SongDatabase</button>
+        <button id="printBtn">Print Database</button>
     </div>
 
     <!-- Will host all calendar elements -->
@@ -36,7 +36,7 @@
 
     <script type="module">
         import { buildCalendar, shuffleArray, fetchSongs, isFirstLoad } from "./js/index.js";
-        import { Database, SongDatabase } from "./js/Database.js";
+        import { Database, DoorDatabase, SongDatabase } from "./js/Database.js";
 
         let container = document.getElementById("CalendarContainer");
 
@@ -47,9 +47,12 @@
 
         document.getElementById("printBtn").addEventListener("click", () => {
             SongDatabase.print();
+            console.log("-----------");
+            DoorDatabase.print();
         });
 
         if (isFirstLoad()) {
+            DoorDatabase.initDoors();
             await buildSongDatabase(true);
         }
 
