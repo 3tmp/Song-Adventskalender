@@ -21,6 +21,14 @@ export class DoorDatabase {
         }
     }
 
+    static isDoorOpened(day) {
+        if (day < 1 || day > 24) {
+            throw Error("Invalid day range");
+        }
+        const key = DoorDatabase.#keyPrefix + DoorDatabase.#dayPrefix + String(day);
+        return window.localStorage.getItem(key);
+    }
+
     static setDoorOpened(day) {
         if (day < 1 || day > 24) {
             throw Error("Invalid day range");

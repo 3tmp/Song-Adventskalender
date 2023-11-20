@@ -11,10 +11,21 @@ export function buildCalendar(parentElement) {
     const bluePrint = document.getElementsByClassName("CalendarItem")[0];
 
     for (let i = 0; i < 24; i++) {
+        const day = i + 1;
         const calendarItem = bluePrint.cloneNode(true);
 
+        // Set the link
         const link = calendarItem.querySelector("a");
-        link.href = "day.html?day=" + (i + 1);
+        link.href = "day.html?day=" + (day);
+
+        // Set the image
+        const img = calendarItem.querySelector(".CalendarItemTop img");
+        if (DoorDatabase.isDoorOpened(day)) {
+            img.src = "img/door_" + day + ".png";
+        }
+        else {
+            img.src = "img/door_closed.png";
+        }
 
         //const inner = calendarItem.querySelector("a > p");
         //inner.innerText = "Tag " + (i + 1);

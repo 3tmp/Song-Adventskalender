@@ -60,6 +60,11 @@ body {
     margin: 0;
 }
 
+.CalendarItemTop img {
+    height: 100%;
+    width: 100%;
+}
+
 .YoutubeDev {
     height: 200px;
     width: 300px;
