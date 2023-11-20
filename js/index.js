@@ -9,6 +9,7 @@ export function buildCalendar(parentElement) {
 
     // When we are generating the calendar, there will be only one CalendarItem (and it's hidden)
     const bluePrint = document.getElementsByClassName("CalendarItem")[0];
+    const maxDoorThatCanBeOpened = new Date().getDate();
 
     for (let i = 0; i < 24; i++) {
         const day = i + 1;
@@ -26,6 +27,19 @@ export function buildCalendar(parentElement) {
         }
         else {
             img.src = "img/door_closed_" + day + ".png";
+        }
+
+        // Set the text
+        const bottomContainer = calendarItem.querySelector(".CalendarItemBottom");
+        if (isDoorOpened) {
+            bottomContainer.querySelector(".AlreadyOpen").classList.remove("Hidden");
+            // TODO get the song and set the title and artist
+        }
+        else if (day <= maxDoorThatCanBeOpened) {
+            bottomContainer.querySelector(".CanOpen").classList.remove("Hidden");
+        }
+        else {
+            bottomContainer.querySelector(".CannotOpen").classList.remove("Hidden");
         }
 
         //const inner = calendarItem.querySelector("a > p");
