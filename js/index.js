@@ -16,8 +16,8 @@ export function buildCalendar(parentElement) {
         const link = calendarItem.querySelector("a");
         link.href = "day.html?day=" + (i + 1);
 
-        const inner = calendarItem.querySelector("a > p");
-        inner.innerText = "Tag " + (i + 1);
+        //const inner = calendarItem.querySelector("a > p");
+        //inner.innerText = "Tag " + (i + 1);
         
         parentElement.appendChild(calendarItem);
         // Now show the item
