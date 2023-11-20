@@ -12,6 +12,7 @@ export function buildCalendar(parentElement) {
 
     for (let i = 0; i < 24; i++) {
         const day = i + 1;
+        const isDoorOpened = DoorDatabase.isDoorOpened(day);
         const calendarItem = bluePrint.cloneNode(true);
 
         // Set the link
@@ -20,11 +21,11 @@ export function buildCalendar(parentElement) {
 
         // Set the image
         const img = calendarItem.querySelector(".CalendarItemTop img");
-        if (DoorDatabase.isDoorOpened(day)) {
+        if (isDoorOpened) {
             img.src = "img/door_" + day + ".png";
         }
         else {
-            img.src = "img/door_closed.png";
+            img.src = "img/door_closed_" + day + ".png";
         }
 
         //const inner = calendarItem.querySelector("a > p");
