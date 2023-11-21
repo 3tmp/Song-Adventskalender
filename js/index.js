@@ -9,6 +9,7 @@ export function buildCalendar(parentElement) {
 
     const december = isInDevMode() ? 10 : 11;
     const year = 2023;
+    const currentMonth = new Date().getMonth();
     const maxDoorThatCanBeOpened = new Date(year, december, new Date().getDate());
 
     // When we are generating the calendar, there will be only one CalendarItem (and it's hidden)
@@ -16,7 +17,7 @@ export function buildCalendar(parentElement) {
 
     for (let i = 0; i < 24; i++) {
         const day = i + 1;
-        const date = new Date(year, december, day);
+        const date = new Date(year, currentMonth, day);
         const isDoorOpened = DoorDatabase.isDoorOpened(day);
         const calendarItem = bluePrint.cloneNode(true);
 
@@ -36,20 +37,19 @@ export function buildCalendar(parentElement) {
         // Set the text
         const bottomContainer = calendarItem.querySelector(".CalendarItemBottom");
         if (isDoorOpened) {
-            bottomContainer.querySelector(".AlreadyOpen").classList.remove("Hidden");
-            // TODO get the song and set the title and artist
+            const node = bottomContainer.querySelector(".AlreadyOpen");
+            node.classList.remove("Hidden");
+
+            const song = SongDatabase.getSong(day);
+            node.querySelector(":nth-Child(1)").innerText = song.title;
+            node.querySelector(":nth-Child(2)").innerText = song.artist;
         }
-        else if (date <= maxDoorThatCanBeOpened) {
+        else if (date <= maxDoorThatCanBeOpened && date.getMonth() === december) {
             bottomContainer.querySelector(".CanOpen").classList.remove("Hidden");
         }
         else {
             bottomContainer.querySelector(".CannotOpen").classList.remove("Hidden");
         }
-
-        //const inner = calendarItem.querySelector("a > p");
-        //inner.innerText = "Tag " + (i + 1);
-
-        // TODO set the values of the song and if the door is allowed and already opened
         
         parentElement.appendChild(calendarItem);
         // Now show the item
