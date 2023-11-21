@@ -7,12 +7,16 @@ import { DoorDatabase, SongDatabase } from "./Database.js";
  */
 export function buildCalendar(parentElement) {
 
+    const december = isInDevMode() ? 10 : 11;
+    const year = 2023;
+    const maxDoorThatCanBeOpened = new Date(year, december, new Date().getDate());
+
     // When we are generating the calendar, there will be only one CalendarItem (and it's hidden)
     const bluePrint = document.getElementsByClassName("CalendarItem")[0];
-    const maxDoorThatCanBeOpened = new Date().getDate();
 
     for (let i = 0; i < 24; i++) {
         const day = i + 1;
+        const date = new Date(year, december, day);
         const isDoorOpened = DoorDatabase.isDoorOpened(day);
         const calendarItem = bluePrint.cloneNode(true);
 
@@ -35,7 +39,7 @@ export function buildCalendar(parentElement) {
             bottomContainer.querySelector(".AlreadyOpen").classList.remove("Hidden");
             // TODO get the song and set the title and artist
         }
-        else if (day <= maxDoorThatCanBeOpened) {
+        else if (date <= maxDoorThatCanBeOpened) {
             bottomContainer.querySelector(".CanOpen").classList.remove("Hidden");
         }
         else {
