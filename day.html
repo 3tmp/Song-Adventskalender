@@ -7,33 +7,37 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div>
+    <div id="DayContainer">
+        <h1 id="NotAllowedYet" style="display: none;">Um dieses Türchen zu öffnen, musst du dich noch ein bisschen gedulden 😉</h1>
+
         <h1 id="songQuote"></h1>
         <h2 id="songExplaination"></h2>
 
         <h3 id="songTitle"></h3>
         <h3 id="songArtist"></h3>
 
-        <div id="songYoutubeContainer">
-            <iframe width="inherit"
-                    height="inherit"
-                    src=""
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-            </iframe>
-        </div>
-        <div id="songSpotifyContainer">
-            <iframe style="border-radius:12px"
-                    src=""
-                    width="100%"
-                    height="152"
-                    frameBorder="0"
-                    allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy">
-            </iframe>
+        <div id="SongPreviewContainer">
+            <div id="songYoutubeContainer">
+                <iframe style="border-radius:12px"
+                        src=""
+                        height="152px"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                        allowfullscreen
+                        loading="lazy">
+                </iframe>
+            </div>
+            <div id="songSpotifyContainer">
+                <iframe style="border-radius:12px"
+                        src=""
+                        height="152px"
+                        frameBorder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy">
+                </iframe>
+            </div>
         </div>
     </div>
 
@@ -51,8 +55,7 @@
         console.log("Selected day is " + day);
 
         if (!isAllowedDay(day)) {
-            const body = document.querySelector("body > div");
-            body.innerHTML = "<h1>Um dieses Türchen zu öffnen, musst du dich noch ein bisschen gedulden 😉</h1>";
+            document.getElementById("NotAllowedYet").style.display = "block";
             throw Error("Not allowed yet");
         }
 
