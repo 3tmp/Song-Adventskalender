@@ -3,7 +3,9 @@
 }
 
 body {
-    background-color: gray;
+    background-image: url("../img/background.jpg");
+    background-repeat: repeat;
+    background-size: contain;
     display: flex;
     align-items: center;
     flex-direction: column;
