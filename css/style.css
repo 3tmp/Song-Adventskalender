@@ -1,3 +1,25 @@
+@font-face {
+    font-family: playfair-display-extrabold;
+    src: url("../font/Playfair_Display/PlayfairDisplay-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: varta-light;
+    src: url("../font/Varta/Varta-Light.ttf");
+}
+
+
+@font-face {
+    font-family: varta-medium;
+    src: url("../font/Varta/Varta-Medium.ttf");
+}
+
+@font-face {
+    font-family: playfair-display-bolditalic;
+    src: url("../font/Playfair_Display/PlayfairDisplay-BoldItalic.ttf");
+}
+
+
 :root {
     --fontColor: rgb(0, 0, 0);
 }
@@ -27,7 +49,7 @@ body {
     margin: 10px;
     height: 230px;
     width: 150px;
-    background-color: brown;
+    background-color: white;
     padding: 0;
     display: flex;
 }
@@ -47,13 +69,12 @@ body {
 }
 
 .CalendarItemTop {
-    background-color: rgb(58, 58, 136);
     height: 65%;
     width: 100%;
 }
 
 .CalendarItemBottom {
-    background-color: rgb(175, 94, 94);
+    background-color: white;
     height: 35%;
     width: 100%;
 }
@@ -74,10 +95,9 @@ body {
 }
 
 #DayContainer {
-    margin: 0;
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
     max-width: 500px;
 }
 
@@ -108,4 +128,31 @@ body {
     height: 152px;
     width: 300px;
     background-color: #1ED760;
+}
+
+#songQuote {
+    font-family: playfair-display-extrabold;
+    font-size: 20pt;
+}
+
+#songExplaination {
+    font-family: varta-light;
+}
+
+#songTitle {
+    margin: 0;
+    font-family: playfair-display-bolditalic;
+    font-size: 15pt;
+}
+
+#songArtist {
+    margin: 0;
+    font-family: playfair-display-bolditalic;
+    font-size: 15pt;
+}
+
+#songSeparator {
+    height: 3px;
+    background-color: black;
+    border: 0;
 }
