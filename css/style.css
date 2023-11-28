@@ -4,10 +4,19 @@
 }
 
 @font-face {
+    font-family: playfair-display-bolditalic;
+    src: url("../font/Playfair_Display/PlayfairDisplay-BoldItalic.ttf");
+}
+
+@font-face {
     font-family: varta-light;
     src: url("../font/Varta/Varta-Light.ttf");
 }
 
+@font-face {
+    font-family: varta-regular;
+    src: url("../font/Varta/Varta-Regular.ttf");
+}
 
 @font-face {
     font-family: varta-medium;
@@ -15,10 +24,9 @@
 }
 
 @font-face {
-    font-family: playfair-display-bolditalic;
-    src: url("../font/Playfair_Display/PlayfairDisplay-BoldItalic.ttf");
+    font-family: varta-bold;
+    src: url("../font/Varta/Varta-Bold.ttf");
 }
-
 
 :root {
     --fontColor: rgb(0, 0, 0);
@@ -88,6 +96,13 @@ body {
     margin: 0;
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 10px;
+    font-family: varta-regular;
+    font-size: 10pt;
+}
+
+.CalendarItemBottom .OpenDoorTitle {
+    font-family: varta-bold;
 }
 
 .Hidden {
