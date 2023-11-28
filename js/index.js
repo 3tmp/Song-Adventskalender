@@ -31,7 +31,7 @@ export function buildCalendar(parentElement) {
             img.src = "img/door_" + day + ".png";
         }
         else {
-            img.src = "img/door_closed_" + day + ".png";
+            img.src = "img/door_closed_" + day + ".jpg";
         }
 
         // Set the text
