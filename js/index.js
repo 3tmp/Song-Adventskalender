@@ -28,7 +28,7 @@ export function buildCalendar(parentElement) {
         // Set the image
         const img = calendarItem.querySelector(".CalendarItemTop img");
         if (isDoorOpened) {
-            img.src = "img/door_" + day + ".png";
+            img.src = "img/door_" + day + ".jpg";
         }
         else {
             img.src = "img/door_closed_" + day + ".jpg";
