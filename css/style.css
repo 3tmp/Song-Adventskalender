@@ -94,10 +94,10 @@ body {
 }
 
 .CalendarItemBottom h5 {
+    padding-top: 10px;
     margin: 0;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 10px;
     font-family: varta-regular;
     font-size: 10pt;
 }
