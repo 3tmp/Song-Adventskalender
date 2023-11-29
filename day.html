@@ -58,6 +58,7 @@
 
         if (!isAllowedDay(day)) {
             document.getElementById("NotAllowedYet").style.display = "block";
+            document.getElementById("songSeparator").style.display = "none";
             throw Error("Not allowed yet");
         }
 

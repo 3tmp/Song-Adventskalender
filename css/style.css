@@ -45,7 +45,8 @@ body {
 #CalendarContainer {
     margin-left: 0;
     margin-right: 0;
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     max-width: 500px;
     display: flex;
     flex-wrap: wrap;
