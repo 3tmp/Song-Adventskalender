@@ -108,5 +108,5 @@ export function shuffleArray(array) {
  * @returns {boolean} true if in dev, false if in prod
  */
 export function isInDevMode() {
-    return window.location.hostname.includes("127.0.0.1");
+    return true //window.location.hostname.includes("127.0.0.1");
 }
