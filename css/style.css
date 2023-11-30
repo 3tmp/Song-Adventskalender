@@ -149,23 +149,25 @@ body {
 
 #songQuote {
     font-family: playfair-display-extrabold;
-    font-size: 20pt;
+    font-size: 17pt;
+    line-height: 19pt;
 }
 
 #songExplaination {
     font-family: varta-light;
+    font-size: 13.5pt;
 }
 
 #songTitle {
     margin: 0;
     font-family: playfair-display-bolditalic;
-    font-size: 15pt;
+    font-size: 14pt;
 }
 
 #songArtist {
     margin: 0;
     font-family: playfair-display-bolditalic;
-    font-size: 15pt;
+    font-size: 14pt;
 }
 
 #songSeparator {
