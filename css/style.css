@@ -29,7 +29,7 @@
 }
 
 :root {
-    --fontColor: rgb(0, 0, 0);
+    --fontColor: rgb(41, 41, 41);
 }
 
 body {
@@ -40,6 +40,7 @@ body {
     align-items: center;
     flex-direction: column;
     margin: 0;
+    color: var(--fontColor);
 }
 
 #CalendarContainer {
@@ -169,6 +170,6 @@ body {
 
 #songSeparator {
     height: 3px;
-    background-color: black;
+    background-color: var(--fontColor);
     border: 0;
 }
