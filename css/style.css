@@ -9,11 +9,6 @@
 }
 
 @font-face {
-    font-family: playfair-display-semibold;
-    src: url("../font/Playfair_Display/PlayfairDisplay-SemiBold.ttf");
-}
-
-@font-face {
     font-family: playfair-display-bold;
     src: url("../font/Playfair_Display/PlayfairDisplay-Bold.ttf");
 }
@@ -21,21 +16,6 @@
 @font-face {
     font-family: varta-light;
     src: url("../font/Varta/Varta-Light.ttf");
-}
-
-@font-face {
-    font-family: varta-regular;
-    src: url("../font/Varta/Varta-Regular.ttf");
-}
-
-@font-face {
-    font-family: varta-medium;
-    src: url("../font/Varta/Varta-Medium.ttf");
-}
-
-@font-face {
-    font-family: varta-bold;
-    src: url("../font/Varta/Varta-Bold.ttf");
 }
 
 :root {
