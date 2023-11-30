@@ -163,6 +163,10 @@ body {
     background-color: #1ED760;
 }
 
+#NotAllowedYet {
+    font-family: playfair-display-extrabold;
+}
+
 #songQuote {
     font-family: playfair-display-extrabold;
     font-size: 17pt;
