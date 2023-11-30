@@ -9,6 +9,16 @@
 }
 
 @font-face {
+    font-family: playfair-display-semibold;
+    src: url("../font/Playfair_Display/PlayfairDisplay-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: playfair-display-bold;
+    src: url("../font/Playfair_Display/PlayfairDisplay-Bold.ttf");
+}
+
+@font-face {
     font-family: varta-light;
     src: url("../font/Varta/Varta-Light.ttf");
 }
@@ -70,12 +80,11 @@ body {
     display: block;
     margin: 0;
     text-decoration: none;
-    color: inherit;
 }
 
 .CalendarItem > a:visited {
     text-decoration: none;
-    color: inherit;
+    color: var(--fontColor);
 }
 
 .CalendarItemTop {
@@ -95,16 +104,21 @@ body {
 }
 
 .CalendarItemBottom h5 {
-    padding-top: 10px;
     margin: 0;
     margin-left: 10px;
     margin-right: 10px;
-    font-family: varta-regular;
     font-size: 10pt;
+    font-family: varta-light;
 }
 
 .CalendarItemBottom .OpenDoorTitle {
-    font-family: varta-bold;
+    padding-top: 10px;
+    font-family: playfair-display-extrabold;
+}
+
+.CalendarItemBottom .OpenDoorArtist {
+    padding-top: 7px;
+    font-family: varta-light;
 }
 
 .Hidden {
@@ -150,12 +164,13 @@ body {
 #songQuote {
     font-family: playfair-display-extrabold;
     font-size: 17pt;
-    line-height: 19pt;
+    line-height: 22pt;
 }
 
 #songExplaination {
     font-family: varta-light;
     font-size: 13.5pt;
+    line-height: 19pt;
 }
 
 #songTitle {
