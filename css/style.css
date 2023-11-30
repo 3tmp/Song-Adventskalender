@@ -120,6 +120,7 @@ body {
 .CalendarItemBottom .OpenDoorArtist {
     padding-top: 7px;
     font-family: varta-light;
+    line-height: 15pt;
 }
 
 .Hidden {
