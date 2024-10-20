@@ -1,5 +1,5 @@
 import { DoorDatabase, SongDatabase } from "./Database.js";
-import { isInDevMode } from "./index.js";
+import { isInDevMode } from "./helper.js";
 
 /**
  * Get the calendar day from the url

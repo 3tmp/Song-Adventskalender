@@ -52,8 +52,9 @@
     <script type="module" src="js/index.js"></script>
 
     <script type="module">
-        import { buildCalendar, shuffleArray, fetchSongs, isFirstLoad, isInDevMode } from "./js/index.js";
+        import { buildCalendar } from "./js/index.js";
         import { Database, DoorDatabase, SongDatabase } from "./js/Database.js";
+        import { isInDevMode, shuffleArray, isFirstLoad, fetchSongs } from "./js/helper.js";
 
         let container = document.getElementById("CalendarContainer");
 
