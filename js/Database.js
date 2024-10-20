@@ -1,9 +1,54 @@
 import { Song } from "./Song.js";
 
+/**
+ * @enum {string}
+ */
+const OpenStatus = {
+    Opened: 'Opened',
+    Closed: 'Closed'
+}
+
 export class Database {
 
     static clear() {
         window.localStorage.clear();
+    }
+
+    /**
+     * @param {string} key 
+     * @param {string} value 
+     */
+    static setString(key, value) {
+        window.localStorage.setItem(key, value)
+    }
+
+    /**
+     * @param {string} key 
+     * @returns {string}
+     */
+    static getString(key) {
+        return window.localStorage.getItem(key);
+    }
+
+    /**
+     * @param {string} key 
+     */
+    removeString(key) {
+        window.localStorage.removeItem(key);
+    }
+
+    /**
+     * Enumerates over all items in the database
+     * @param {function(string, string): boolean} callback The callback function to be executed for each item.
+     */
+    static enum(callback) {
+        for (var i = 0; i < window.localStorage.length; i++) {
+            const key = window.localStorage.key(i);
+            const value = window.localStorage.getItem(key);
+            if (!callback(key, value)) {
+                return;
+            }
+        }
     }
 }
 
@@ -16,54 +61,61 @@ export class DoorDatabase {
         const prefix = DoorDatabase.#keyPrefix + DoorDatabase.#dayPrefix;
 
         for (let i = 0; i < 24; i++) {
-            // Set an empty string, because `false` gets serialized to "false" which evaluates to `true`
-            window.localStorage.setItem(prefix + String(i + 1), "");
+            Database.setString(prefix + String(i + 1), OpenStatus.Closed);
         }
     }
 
     static isDoorOpened(day) {
-        if (day < 1 || day > 24) {
-            throw Error("Invalid day range");
-        }
+        DoorDatabase.#ensureDayRange(day);
+
         const key = DoorDatabase.#keyPrefix + DoorDatabase.#dayPrefix + String(day);
-        return window.localStorage.getItem(key);
+        return Database.getString(key) === OpenStatus.Opened;
     }
 
     static setDoorOpened(day) {
-        if (day < 1 || day > 24) {
-            throw Error("Invalid day range");
-        }
+        DoorDatabase.#ensureDayRange(day);
+
         const key = DoorDatabase.#keyPrefix + DoorDatabase.#dayPrefix + String(day);
-        window.localStorage.setItem(key, true);
+        Database.setString(key, OpenStatus.Opened);
     }
 
     static print() {
         const doors = [];
-        DoorDatabase.#enumDoors((day, opened) => {
-            doors.push({day: day, opened: opened});
+        DoorDatabase.#enumDoors((day, status) => {
+            doors.push({day: day, status: status});
             return true;
         });
 
         doors.sort((a, b) => a.day - b.day);
-        doors.forEach((obj) => console.log(obj.day + " is opened: " + obj.opened));
+        doors.forEach((obj) => console.log(obj.day + ": " + obj.status));
 
         console.log(doors.length + " doors in database.");
     }
 
     /**
      * Enumerates all doors and whether they are already opened
-     * @param {function(number, boolean): boolean} callback
+     * @param {function(number, OpenStatus): boolean} callback
      */
     static #enumDoors(callback) {
-        for (var i = 0; i < window.localStorage.length; i++) {
-            const key = window.localStorage.key(i);
+        const prefix = DoorDatabase.#keyPrefix + DoorDatabase.#dayPrefix;
+        Database.enum((key, value) => {
             if (key.startsWith(DoorDatabase.#keyPrefix)) {
-                const opened = Boolean(window.localStorage.getItem(key));
-                const day = Number(key.replace(DoorDatabase.#keyPrefix + DoorDatabase.#dayPrefix, ""));
-                if (!callback(day, opened)) {
-                    return;
+                const day = Number(key.replace(prefix, ''));
+                if (!callback(day, value)) {
+                    return false;
                 }
             }
+            return true;
+        });
+    }
+
+    /**
+     * Ensures that the day is in the range [1, 24]
+     * @param {number} day The day to check
+     */
+    static #ensureDayRange(day) {
+        if (day < 1 || day > 24) {
+            throw Error("Invalid day range");
         }
     }
 }
@@ -83,10 +135,10 @@ export class SongDatabase {
         this.#ensureSong(song);
 
         const key = SongDatabase.#keyPrefix + SongDatabase.#dayPrefix + String(day);
-        if (window.localStorage.getItem(key) != null) {
+        if (Database.getString(key) != null) {
             throw Error("The database already contains a song for day " + day);
         }
-        window.localStorage.setItem(key, song.serialize());
+        Database.setString(key, song.serialize());
     }
 
     /**
@@ -113,7 +165,7 @@ export class SongDatabase {
         });
 
         const prefix = SongDatabase.#keyPrefix + SongDatabase.#dayPrefix;
-        keys.forEach((day) => window.localStorage.removeItem(prefix + String(day)));
+        keys.forEach((day) => Database.removeString(prefix + String(day)));
     }
 
     /**
@@ -164,7 +216,7 @@ export class SongDatabase {
      */
     static #getSong(dayNumber) {
         const key = SongDatabase.#keyPrefix + SongDatabase.#dayPrefix + String(dayNumber);
-        const songStr = window.localStorage.getItem(key);
+        const songStr = Database.getString(key);
         return songStr == null ? null : Song.deserialize(songStr);
     }
 
@@ -174,15 +226,17 @@ export class SongDatabase {
      *        If the callback returns true, the enumeration continues, if it returns false, it gets stopped.
      */
     static #enumSongs(callback) {
-        for (var i = 0; i < window.localStorage.length; i++) {
-            const key = window.localStorage.key(i);
+        const prefix = SongDatabase.#keyPrefix + SongDatabase.#dayPrefix;
+
+        Database.enum((key, value) => {
             if (key.startsWith(SongDatabase.#keyPrefix)) {
-                const song = Song.deserialize(window.localStorage.getItem(key));
-                const day = Number(key.replace(SongDatabase.#keyPrefix + SongDatabase.#dayPrefix, ""));
+                const song = Song.deserialize(value);
+                const day = Number(key.replace(prefix, ''));
                 if (!callback(day, song)) {
-                    return;
+                    return false;
                 }
             }
-        }
+            return true;
+        });
     }
 }
