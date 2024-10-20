@@ -92,7 +92,7 @@
                 SongDatabase.clearSongs();
             }
             else if (!SongDatabase.isEmpty()) {
-                throw Error("Song database already contains items");
+                throw new Error("Song database already contains items");
             }
 
             /** @type {Array} */

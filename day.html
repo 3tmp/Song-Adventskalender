@@ -58,14 +58,14 @@
 
         if (Number.isNaN(day)) {
             document.querySelector("body").innerHTML = "Error";
-            throw Error("No valid day");
+            throw new Error("No valid day");
         }
         console.log("Selected day is " + day);
 
         if (!isAllowedDay(day)) {
             document.getElementById("NotAllowedYet").style.display = "block";
             document.getElementById("songSeparator").style.display = "none";
-            throw Error("Not allowed yet");
+            throw new Error("Not allowed yet");
         }
 
         // Set the door as opened

@@ -115,7 +115,7 @@ export class DoorDatabase {
      */
     static #ensureDayRange(day) {
         if (day < 1 || day > 24) {
-            throw Error("Invalid day range");
+            throw new Error("Invalid day range");
         }
     }
 }
@@ -136,7 +136,7 @@ export class SongDatabase {
 
         const key = SongDatabase.#keyPrefix + SongDatabase.#dayPrefix + String(day);
         if (Database.getString(key) != null) {
-            throw Error("The database already contains a song for day " + day);
+            throw new Error("The database already contains a song for day " + day);
         }
         Database.setString(key, song.serialize());
     }
@@ -149,7 +149,7 @@ export class SongDatabase {
     static getSong(day) {
         const song = SongDatabase.#getSong(day);
         if (song == null) {
-            throw Error("The database contains no song for day " + day);
+            throw new Error("The database contains no song for day " + day);
         }
         return song;
     }
@@ -205,7 +205,7 @@ export class SongDatabase {
      */
     static #ensureSong(song) {
         if (!(song instanceof Song)) {
-            throw TypeError("Not a song");
+            throw new TypeError("Not a song");
         }
     }
 

@@ -52,7 +52,7 @@ export class Song {
      */
     static deserialize(songStr) {
         if (!typeof(songStr) === "string") {
-            throw TypeError("Invalid song");
+            throw new TypeError("Invalid song");
         }
 
         const song = JSON.parse(songStr);
