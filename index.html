@@ -37,9 +37,10 @@
         </a>
     </div>
 
-    <div style="display: none;">
-        <button id="clearAllBtn">Clear Database</button>
-        <button id="printBtn">Print Database</button>
+    <div id="devTools" style="display: none;">
+        <button id="devClearAllBtn">Clear Database</button>
+        <button id="devPrintBtn">Print Database</button>
+        <button id="devUnlockAllBtn">Unlock all days</button>
     </div>
 
     <!-- Will host all calendar elements -->
@@ -51,21 +52,32 @@
     <script type="module" src="js/index.js"></script>
 
     <script type="module">
-        import { buildCalendar, shuffleArray, fetchSongs, isFirstLoad } from "./js/index.js";
+        import { buildCalendar, shuffleArray, fetchSongs, isFirstLoad, isInDevMode } from "./js/index.js";
         import { Database, DoorDatabase, SongDatabase } from "./js/Database.js";
 
         let container = document.getElementById("CalendarContainer");
 
-        document.getElementById("clearAllBtn").addEventListener("click", () => {
+        document.getElementById('devClearAllBtn').addEventListener('click', () => {
             Database.clear();
             console.log("Cleared full database");
         });
 
-        document.getElementById("printBtn").addEventListener("click", () => {
+        document.getElementById('devPrintBtn').addEventListener('click', () => {
             SongDatabase.print();
             console.log("-----------");
             DoorDatabase.print();
         });
+
+        document.getElementById('devUnlockAllBtn').addEventListener('click', () => {
+            for (let i = 0; i < 24; i++) {
+                DoorDatabase.setDoorOpened(i + 1);
+            }
+            console.log("Unlocked all doors");
+        });
+
+        if (isInDevMode()) {
+            document.getElementById('devTools').style.display = 'block';
+        }
 
         if (isFirstLoad()) {
             DoorDatabase.initDoors();
@@ -84,7 +96,7 @@
             }
 
             /** @type {Array} */
-            const songs = await fetchSongs("songs.json");
+            const songs = await fetchSongs('songs.json');
 
             // Each user should have a random order
             shuffleArray(songs);
