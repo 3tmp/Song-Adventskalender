@@ -8,7 +8,7 @@ import { DoorDatabase, SongDatabase } from "./Database.js";
 export function buildCalendar(parentElement) {
 
     const december = isInDevMode() ? 10 : 11;
-    const year = 2023;
+    const year = 2024;
     const currentMonth = new Date().getMonth();
     const maxDoorThatCanBeOpened = new Date(year, december, new Date().getDate());
 

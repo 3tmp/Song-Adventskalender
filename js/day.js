@@ -31,7 +31,7 @@ export function getSong(day) {
 export function isAllowedDay(day) {
     // If we are in dev mode, we set the month to November, but in prod, we really use december
     const december = isInDevMode() ? 10 : 11;
-    const year = 2023;
+    const year = 2024;
     return new Date() >= new Date(year, december, day);
 }
 
