@@ -1,5 +1,6 @@
 import { SongDatabase } from "./Database.js";
 import { Song } from "./Song.js";
+import { CURRENT_YEAR } from "./Constants.js";
 
 /**
  * Determines if the website is currently in dev mode
@@ -52,5 +53,7 @@ export async function fetchSongs(requestUrl) {
     const response = await fetch(request);
     const result = await response.json();
 
-    return result.map((song) => new Song(song));
+    const songs = result.years[CURRENT_YEAR];
+
+    return songs.map((song) => new Song(song));
 }
