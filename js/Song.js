@@ -55,7 +55,13 @@ export class Song {
             throw new TypeError("Invalid song");
         }
 
+        const keys = ['title', 'artist', 'quote', 'explaination', 'spotifyId', 'youtubeId'];
+
         const song = JSON.parse(songStr);
+        if (!keys.every(key => key in song)) {
+            throw new TypeError("Invalid song");
+        }
+
         return new Song(song);
     }
 }
