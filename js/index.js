@@ -1,6 +1,6 @@
-import { Song } from "./Song.js";
 import { DoorDatabase, SongDatabase } from "./Database.js";
-import { isInDevMode } from "./helper.js";
+import { isInDevMode, monthNameToJsMonth } from "./helper.js";
+import { CURRENT_YEAR, DEV_MONTH } from "./Constants.js";
 
 /**
  * Builds the 24 adventcalendar "doors" and inserts them into the `parentElement`
@@ -8,17 +8,16 @@ import { isInDevMode } from "./helper.js";
  */
 export function buildCalendar(parentElement) {
 
-    const december = isInDevMode() ? 10 : 11;
-    const year = 2024;
+    const december = monthNameToJsMonth(isInDevMode() ? DEV_MONTH : 'Dec');
     const currentMonth = new Date().getMonth();
-    const maxDoorThatCanBeOpened = new Date(year, december, new Date().getDate());
+    const maxDoorThatCanBeOpened = new Date(CURRENT_YEAR, december, new Date().getDate());
 
     // When we are generating the calendar, there will be only one CalendarItem (and it's hidden)
     const bluePrint = document.getElementsByClassName("CalendarItem")[0];
 
     for (let i = 0; i < 24; i++) {
         const day = i + 1;
-        const date = new Date(year, currentMonth, day);
+        const date = new Date(CURRENT_YEAR, currentMonth, day);
         const isDoorOpened = DoorDatabase.isDoorOpened(day);
         const calendarItem = bluePrint.cloneNode(true);
 

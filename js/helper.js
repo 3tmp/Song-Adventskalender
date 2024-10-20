@@ -57,3 +57,21 @@ export async function fetchSongs(requestUrl) {
 
     return songs.map((song) => new Song(song));
 }
+
+/**
+ * Converts a month name into a js month number
+ * @param {'Jan'|'Feb'|'Mar'|'Apr'|'May'|'Jun'|'Jul'|'Aug'|'Sep'|'Oct'|'Nov'|'Dec'} monthName The name to check
+ * @returns {number} The month number for the `Date` object (0 to 11)
+ */
+export function monthNameToJsMonth(monthName) {
+    return {Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5, Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11}[monthName];
+}
+
+/**
+ * Coverts a js month number into a month name
+ * @param {number} jsMonth The number of the month (0 to 11)
+ * @returns {'Jan'|'Feb'|'Mar'|'Apr'|'May'|'Jun'|'Jul'|'Aug'|'Sep'|'Oct'|'Nov'|'Dec'}
+ */
+export function jsMonthToMonthName(jsMonth) {
+    return ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][jsMonth];
+}
