@@ -121,11 +121,7 @@ body {
     margin-bottom: 20px;
 }
 
-#songYoutubeContainer {
-
-}
-
-#songSpotifyContainer {
+#songYoutubeContainer + #songSpotifyContainer {
     margin-top: 10px;
 }
 
