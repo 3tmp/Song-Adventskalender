@@ -2,8 +2,6 @@ import { Database, DoorDatabase, SongDatabase } from "./Database.js";
 import { isInDevMode, shuffleArray, isFirstLoad, fetchSongs, monthNameToJsMonth } from "./helper.js";
 import { CURRENT_YEAR, DEV_MONTH, URL_PARAM_DAY } from "./Constants.js";
 
-const container = document.getElementById("CalendarContainer");
-
 document.getElementById('devClearAllBtn').addEventListener('click', () => {
     Database.clear();
     console.log("Cleared full database");
@@ -38,6 +36,9 @@ document.getElementById('devReloadBtn').addEventListener('click', () => {
 });
 
 
+// Actual application entry point
+
+const container = document.getElementById("CalendarContainer");
 
 if (isInDevMode()) {
     document.getElementById('devTools').style.display = 'block';
@@ -72,13 +73,11 @@ async function buildSongDatabase(overwriteExisting) {
     });
 }
 
-
-
 /**
  * Builds the 24 adventcalendar "doors" and inserts them into the `parentElement`
  * @param {HTMLElement} parentElement The container element for the "doors"
  */
-export function buildCalendar(parentElement) {
+function buildCalendar(parentElement) {
 
     const december = monthNameToJsMonth(isInDevMode() ? DEV_MONTH : 'Dec');
     const currentMonth = new Date().getMonth();
