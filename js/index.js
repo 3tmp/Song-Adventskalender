@@ -23,7 +23,7 @@ export function buildCalendar(parentElement) {
 
         // Set the link
         const link = calendarItem.querySelector("a");
-        link.href = `day.html?${URL_PARAM_DAY}="${day}`;
+        link.href = `day.html?${URL_PARAM_DAY}=${day}`;
 
         // Set the image
         const img = calendarItem.querySelector(".CalendarItemTop img");
