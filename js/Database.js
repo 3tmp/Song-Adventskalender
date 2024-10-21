@@ -33,7 +33,7 @@ export class Database {
     /**
      * @param {string} key 
      */
-    removeString(key) {
+    static removeString(key) {
         window.localStorage.removeItem(key);
     }
 
