@@ -2,7 +2,7 @@ import { Database, DoorDatabase, SongDatabase } from "./Database.js";
 import { isInDevMode, shuffleArray, isFirstLoad, fetchSongs, monthNameToJsMonth } from "./helper.js";
 import { CURRENT_YEAR, DEV_MONTH, URL_PARAM_DAY } from "./Constants.js";
 
-let container = document.getElementById("CalendarContainer");
+const container = document.getElementById("CalendarContainer");
 
 document.getElementById('devClearAllBtn').addEventListener('click', () => {
     Database.clear();
@@ -68,7 +68,7 @@ export function buildCalendar(parentElement) {
     const maxDoorThatCanBeOpened = new Date(CURRENT_YEAR, december, new Date().getDate());
 
     // When we are generating the calendar, there will be only one CalendarItem (and it's hidden)
-    const bluePrint = document.getElementsByClassName("CalendarItem")[0];
+    const bluePrint = document.getElementsByClassName('CalendarItem')[0];
 
     for (let i = 0; i < 24; i++) {
         const day = i + 1;
@@ -77,37 +77,37 @@ export function buildCalendar(parentElement) {
         const calendarItem = bluePrint.cloneNode(true);
 
         // Set the link
-        const link = calendarItem.querySelector("a");
+        const link = calendarItem.querySelector('a');
         link.href = `day.html?${URL_PARAM_DAY}=${day}`;
 
         // Set the image
-        const img = calendarItem.querySelector(".CalendarItemTop img");
+        const img = calendarItem.querySelector('.CalendarItemTop img');
         if (isDoorOpened) {
-            img.src = "img/door_" + day + ".jpg";
+            img.src = `img/door_${day}.jpg`;
         }
         else {
-            img.src = "img/door_closed_" + day + ".jpg";
+            img.src = `img/door_closed_${day}.jpg`;
         }
 
         // Set the text
-        const bottomContainer = calendarItem.querySelector(".CalendarItemBottom");
+        const bottomContainer = calendarItem.querySelector('.CalendarItemBottom');
         if (isDoorOpened) {
-            const node = bottomContainer.querySelector(".AlreadyOpen");
-            node.classList.remove("Hidden");
+            const node = bottomContainer.querySelector('.AlreadyOpen');
+            node.classList.remove('Hidden');
 
             const song = SongDatabase.getSong(day);
-            node.querySelector(":nth-Child(1)").innerText = song.title;
-            node.querySelector(":nth-Child(2)").innerText = song.artist;
+            node.querySelector(':nth-Child(1)').innerText = song.title;
+            node.querySelector(':nth-Child(2)').innerText = song.artist;
         }
         else if (date <= maxDoorThatCanBeOpened && date.getMonth() === december) {
-            bottomContainer.querySelector(".CanOpen").classList.remove("Hidden");
+            bottomContainer.querySelector('.CanOpen').classList.remove('Hidden');
         }
         else {
-            bottomContainer.querySelector(".CannotOpen").classList.remove("Hidden");
+            bottomContainer.querySelector('.CannotOpen').classList.remove('Hidden');
         }
         
         parentElement.appendChild(calendarItem);
         // Now show the item
-        calendarItem.style.display = "block";
+        calendarItem.style.display = 'block';
     }
 }

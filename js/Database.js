@@ -55,8 +55,8 @@ export class Database {
 
 export class DoorDatabase {
 
-    static #keyPrefix = "door_";
-    static #dayPrefix = "day_";
+    static #keyPrefix = 'door_';
+    static #dayPrefix = 'day_';
 
     static initDoors() {
         const prefix = CURRENT_YEAR + '_' + DoorDatabase.#keyPrefix + DoorDatabase.#dayPrefix;
@@ -88,7 +88,7 @@ export class DoorDatabase {
         });
 
         doors.sort((a, b) => a.day - b.day);
-        doors.forEach((obj) => console.log(obj.day + ": " + obj.status));
+        doors.forEach((obj) => console.log(obj.day + ': ' + obj.status));
 
         console.log(doors.length + " doors in database.");
     }
@@ -123,8 +123,8 @@ export class DoorDatabase {
 
 export class SongDatabase {
 
-    static #keyPrefix = "song_";
-    static #dayPrefix = "day_";
+    static #keyPrefix = 'song_';
+    static #dayPrefix = 'day_';
 
     /**
      * Serializes the `song` and stores it in the database. 
@@ -194,7 +194,7 @@ export class SongDatabase {
         });
 
         songs.sort((a, b) => a.day - b.day);
-        songs.forEach((obj) => console.log(obj.day + ": " + obj.song.toString()));
+        songs.forEach((obj) => console.log(obj.day + ': ' + obj.song.toString()));
 
         console.log(songs.length + " songs in database.");
     }

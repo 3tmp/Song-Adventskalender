@@ -51,7 +51,7 @@ export class Song {
      * @throws {TypeError} If `song` is not a string
      */
     static deserialize(songStr) {
-        if (!typeof(songStr) === "string") {
+        if (typeof(songStr) !== 'string') {
             throw new TypeError("Invalid song");
         }
 
