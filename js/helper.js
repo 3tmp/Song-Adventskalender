@@ -7,7 +7,9 @@ import { CURRENT_YEAR } from "./Constants.js";
  * @returns {boolean} true if in dev, false if in prod
  */
 export function isInDevMode() {
-    return window.location.hostname.includes('127.0.0.1');
+    return true;
+    // TODO revert later!
+    //return window.location.hostname.includes('127.0.0.1');
 }
 
 /**
