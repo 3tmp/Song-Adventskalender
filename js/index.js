@@ -1,6 +1,6 @@
 import { DoorDatabase, SongDatabase } from "./Database.js";
 import { isInDevMode, monthNameToJsMonth } from "./helper.js";
-import { CURRENT_YEAR, DEV_MONTH } from "./Constants.js";
+import { CURRENT_YEAR, DEV_MONTH, URL_PARAM_DAY } from "./Constants.js";
 
 /**
  * Builds the 24 adventcalendar "doors" and inserts them into the `parentElement`
@@ -23,7 +23,7 @@ export function buildCalendar(parentElement) {
 
         // Set the link
         const link = calendarItem.querySelector("a");
-        link.href = "day.html?day=" + (day);
+        link.href = `day.html?${URL_PARAM_DAY}="${day}`;
 
         // Set the image
         const img = calendarItem.querySelector(".CalendarItemTop img");

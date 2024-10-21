@@ -1,22 +1,19 @@
 import { DoorDatabase, SongDatabase } from "./Database.js";
 import { isInDevMode, monthNameToJsMonth } from "./helper.js";
-import { CURRENT_YEAR, DEV_MONTH } from "./Constants.js";
+import { CURRENT_YEAR, DEV_MONTH, URL_PARAM_DAY } from "./Constants.js";
 
 /**
  * Get the calendar day from the url
  * @returns {Number} The number on success or `NaN` on failure
  */
 export function getDayFromUrl() {
-    const parameter = window.location.search;
-    if (parameter.length == 0) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlParamDay = urlParams.get(URL_PARAM_DAY);
+
+    if (urlParamDay === null) {
         return Number.NaN;
     }
-
-    if (!parameter.startsWith("?day=")) {
-        return Number.NaN;
-    }
-
-    const day = Number(parameter.substring(5));
+    const day = Number(urlParamDay);
 
     if (Number.isNaN(day) || day < 1 || day > 24) {
         return Number.NaN;
