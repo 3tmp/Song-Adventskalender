@@ -1,4 +1,5 @@
 import { Song } from "./Song.js";
+import { CURRENT_YEAR } from "./Constants.js";
 
 /**
  * @enum {string}
@@ -58,7 +59,7 @@ export class DoorDatabase {
     static #dayPrefix = "day_";
 
     static initDoors() {
-        const prefix = DoorDatabase.#keyPrefix + DoorDatabase.#dayPrefix;
+        const prefix = CURRENT_YEAR + '_' + DoorDatabase.#keyPrefix + DoorDatabase.#dayPrefix;
 
         for (let i = 0; i < 24; i++) {
             Database.setString(prefix + String(i + 1), OpenStatus.Closed);
@@ -68,14 +69,14 @@ export class DoorDatabase {
     static isDoorOpened(day) {
         DoorDatabase.#ensureDayRange(day);
 
-        const key = DoorDatabase.#keyPrefix + DoorDatabase.#dayPrefix + String(day);
+        const key = CURRENT_YEAR + '_' + DoorDatabase.#keyPrefix + DoorDatabase.#dayPrefix + String(day);
         return Database.getString(key) === OpenStatus.Opened;
     }
 
     static setDoorOpened(day) {
         DoorDatabase.#ensureDayRange(day);
 
-        const key = DoorDatabase.#keyPrefix + DoorDatabase.#dayPrefix + String(day);
+        const key = CURRENT_YEAR + '_' + DoorDatabase.#keyPrefix + DoorDatabase.#dayPrefix + String(day);
         Database.setString(key, OpenStatus.Opened);
     }
 
@@ -97,9 +98,9 @@ export class DoorDatabase {
      * @param {function(number, OpenStatus): boolean} callback
      */
     static #enumDoors(callback) {
-        const prefix = DoorDatabase.#keyPrefix + DoorDatabase.#dayPrefix;
+        const prefix = CURRENT_YEAR + '_' + DoorDatabase.#keyPrefix + DoorDatabase.#dayPrefix;
         Database.enum((key, value) => {
-            if (key.startsWith(DoorDatabase.#keyPrefix)) {
+            if (key.startsWith(CURRENT_YEAR + '_' + DoorDatabase.#keyPrefix)) {
                 const day = Number(key.replace(prefix, ''));
                 if (!callback(day, value)) {
                     return false;
@@ -134,7 +135,7 @@ export class SongDatabase {
     static storeSong(day, song) {
         this.#ensureSong(song);
 
-        const key = SongDatabase.#keyPrefix + SongDatabase.#dayPrefix + String(day);
+        const key = CURRENT_YEAR + '_' + SongDatabase.#keyPrefix + SongDatabase.#dayPrefix + String(day);
         if (Database.getString(key) != null) {
             throw new Error("The database already contains a song for day " + day);
         }
@@ -164,7 +165,7 @@ export class SongDatabase {
             return true;
         });
 
-        const prefix = SongDatabase.#keyPrefix + SongDatabase.#dayPrefix;
+        const prefix = CURRENT_YEAR + '_' + SongDatabase.#keyPrefix + SongDatabase.#dayPrefix;
         keys.forEach((day) => Database.removeString(prefix + String(day)));
     }
 
@@ -215,7 +216,7 @@ export class SongDatabase {
      * @returns {Song|null} A `Song` if the key was found, `null` otherwise
      */
     static #getSong(dayNumber) {
-        const key = SongDatabase.#keyPrefix + SongDatabase.#dayPrefix + String(dayNumber);
+        const key = CURRENT_YEAR + '_' + SongDatabase.#keyPrefix + SongDatabase.#dayPrefix + String(dayNumber);
         const songStr = Database.getString(key);
         return songStr == null ? null : Song.deserialize(songStr);
     }
@@ -226,10 +227,10 @@ export class SongDatabase {
      *        If the callback returns true, the enumeration continues, if it returns false, it gets stopped.
      */
     static #enumSongs(callback) {
-        const prefix = SongDatabase.#keyPrefix + SongDatabase.#dayPrefix;
+        const prefix = CURRENT_YEAR + '_' + SongDatabase.#keyPrefix + SongDatabase.#dayPrefix;
 
         Database.enum((key, value) => {
-            if (key.startsWith(SongDatabase.#keyPrefix)) {
+            if (key.startsWith(CURRENT_YEAR + '_' + SongDatabase.#keyPrefix)) {
                 const song = Song.deserialize(value);
                 const day = Number(key.replace(prefix, ''));
                 if (!callback(day, song)) {
