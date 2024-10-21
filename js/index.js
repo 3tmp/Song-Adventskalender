@@ -1,6 +1,61 @@
-import { DoorDatabase, SongDatabase } from "./Database.js";
-import { isInDevMode, monthNameToJsMonth } from "./helper.js";
+import { Database, DoorDatabase, SongDatabase } from "./Database.js";
+import { isInDevMode, shuffleArray, isFirstLoad, fetchSongs, monthNameToJsMonth } from "./helper.js";
 import { CURRENT_YEAR, DEV_MONTH, URL_PARAM_DAY } from "./Constants.js";
+
+let container = document.getElementById("CalendarContainer");
+
+document.getElementById('devClearAllBtn').addEventListener('click', () => {
+    Database.clear();
+    console.log("Cleared full database");
+});
+
+document.getElementById('devPrintBtn').addEventListener('click', () => {
+    SongDatabase.print();
+    console.log("-----------");
+    DoorDatabase.print();
+});
+
+document.getElementById('devUnlockAllBtn').addEventListener('click', () => {
+    for (let i = 0; i < 24; i++) {
+        DoorDatabase.setDoorOpened(i + 1);
+    }
+    console.log("Unlocked all doors");
+});
+
+if (isInDevMode()) {
+    document.getElementById('devTools').style.display = 'block';
+}
+
+if (isFirstLoad()) {
+    DoorDatabase.initDoors();
+    await buildSongDatabase(true);
+}
+
+// Now we can be sure that the database contains 24 entries
+buildCalendar(container);
+
+async function buildSongDatabase(overwriteExisting) {
+    if (overwriteExisting) {
+        SongDatabase.clearSongs();
+    }
+    else if (!SongDatabase.isEmpty()) {
+        throw new Error("Song database already contains items");
+    }
+
+    /** @type {Array} */
+    const songs = await fetchSongs('songs.json');
+
+    // Each user should have a random order
+    shuffleArray(songs);
+
+    // Store the songs in the database
+    songs.forEach((song, index) => {
+        const day = index + 1;
+        SongDatabase.storeSong(day, song);
+    });
+}
+
+
 
 /**
  * Builds the 24 adventcalendar "doors" and inserts them into the `parentElement`
