@@ -22,6 +22,23 @@ document.getElementById('devUnlockAllBtn').addEventListener('click', () => {
     console.log("Unlocked all doors");
 });
 
+document.getElementById('devUnlockDayBtn').addEventListener('click', () => {
+    let dayToUnlock = prompt("Enter day to unlock:");
+    if (isNaN(dayToUnlock)) {
+        alert("Invalid number");
+        return;
+    }
+    dayToUnlock = Number(dayToUnlock);
+    DoorDatabase.setDoorOpened(dayToUnlock);
+    console.log("Unlocked door " + dayToUnlock);
+});
+
+document.getElementById('devReloadBtn').addEventListener('click', () => {
+    location.reload();
+});
+
+
+
 if (isInDevMode()) {
     document.getElementById('devTools').style.display = 'block';
 }
