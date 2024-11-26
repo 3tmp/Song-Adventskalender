@@ -39,7 +39,8 @@ songTitle.innerText = song.title;
 songArtist.innerText = song.artist;
 
 // Only embed the youtube/spotify links if not in dev mode
-if (!isInDevMode()) {
+if (isInDevMode()) {
+    // TODO REVERT!
     songYoutubeContainer.querySelector('iframe').src = song.youtubeEmbedLink;
     songSpotifyContainer.querySelector('iframe').src = song.spotifyEmbedLink;
 }
