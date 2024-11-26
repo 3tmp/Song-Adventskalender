@@ -11,4 +11,4 @@ export const URL_PARAM_DAY = 'day';
 // Dev constants
 
 /** The month name that unlocks the days */
-export const DEV_MONTH = 'Oct';
+export const DEV_MONTH = 'Nov';
