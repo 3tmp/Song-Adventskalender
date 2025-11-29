@@ -38,6 +38,15 @@ songExplaination.innerText = song.explaination;
 songTitle.innerText = song.title;
 songArtist.innerText = song.artist;
 
+// If type is an impuls, hide the youtube and spotify containers and only show on demand
+if (song.type === 'impuls') {
+    if (!song.youtubeId) {
+        songYoutubeContainer.style.display = 'none';
+    }
+    if (!song.spotifyId) {
+        songSpotifyContainer.style.display = 'none';
+    }
+}
 // Only embed the youtube/spotify links if not in dev mode
 if (!isInDevMode()) {
     songYoutubeContainer.querySelector('iframe').src = song.youtubeEmbedLink;

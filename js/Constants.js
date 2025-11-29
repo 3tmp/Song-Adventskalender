@@ -1,8 +1,8 @@
 /** The year to use in the calendar */
-export const CURRENT_YEAR = 2024;
+export const CURRENT_YEAR = 2025;
 
 /** The available years in the songs.json file */
-export const AVAILABLE_YEARS = [2023, 2024];
+export const AVAILABLE_YEARS = [2023, 2024, 2025];
 
 /** The url parameter for the day.html page that denotes the selected day */
 export const URL_PARAM_DAY = 'day';

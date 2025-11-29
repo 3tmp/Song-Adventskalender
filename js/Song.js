@@ -7,6 +7,7 @@ export class Song {
         this.explaination = obj.explaination;
         this.spotifyId = obj.spotifyId;
         this.youtubeId = obj.youtubeId;
+        this.type = obj.type;
     }
 
     get youtubeLink() {
@@ -33,7 +34,7 @@ export class Song {
     }
 
     toString() {
-        return "'" + this.title + "' by '" + this.artist + "'";
+        return this.type + ": '" + this.title + "' by '" + this.artist + "'";
     }
 
     /**
@@ -55,7 +56,7 @@ export class Song {
             throw new TypeError("Invalid song");
         }
 
-        const keys = ['title', 'artist', 'quote', 'explaination', 'spotifyId', 'youtubeId'];
+        const keys = ['title', 'artist', 'quote', 'explaination', 'spotifyId', 'youtubeId', 'type'];
 
         const song = JSON.parse(songStr);
         if (!keys.every(key => key in song)) {
