@@ -13,11 +13,13 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "validate:content": "tsx scripts/validate-content.ts"
+    "validate:content": "tsx scripts/validate-content.ts",
+    "fonts": "node scripts/subset-fonts.mjs"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",
     "jsdom": "^31.0.1",
+    "subset-font": "^2.9.0",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
     "vite": "^8.3.8",

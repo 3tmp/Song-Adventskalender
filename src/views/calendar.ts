@@ -60,10 +60,28 @@ function renderDoor(ctx: CalendarContext, day: number): HTMLElement {
   const classes = ['door', `door--${status}`];
   if (!unlocked) classes.push('door--sealed');
 
-  const children: HTMLElement[] = [h('span', { class: 'door-number', text: String(day) })];
+  // Per-door artwork carried over from v1: photos behind scrims are what the
+  // door states style (WebP with JPEG fallback, lazily loaded).
+  const base = `img/doors/${opened ? 'door' : 'door_closed'}_${day}`;
+  const preview = opened ? doorPreviewFor(entry) : null;
+  const photo = h('picture', {}, [
+    h('source', { attrs: { type: 'image/webp', srcset: `${base}.webp` } }),
+    h('img', {
+      class: 'door-img',
+      attrs: {
+        src: `${base}.jpg`,
+        loading: 'lazy',
+        decoding: 'async',
+        alt: preview && (preview.title || preview.subtitle)
+          ? `${preview.title}${preview.subtitle ? ` — ${preview.subtitle}` : ''}`
+          : '',
+      },
+    }),
+  ]);
 
-  if (opened) {
-    const preview = doorPreviewFor(entry);
+  const children: (Node | null)[] = [photo, h('span', { class: 'door-number', text: String(day) })];
+
+  if (preview) {
     children.push(
       h('div', { class: 'door-preview' }, [
         ...(preview.label ? [h('span', { class: 'door-preview-label', text: preview.label })] : []),
