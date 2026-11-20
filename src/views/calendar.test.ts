@@ -52,6 +52,17 @@ describe('renderCalendar', () => {
     expect(doors[10].classList.contains('door--sealed')).toBe(true);
   });
 
+  it('leaves the number to the artwork on closed doors, chips it on opened ones', () => {
+    const view = renderCalendar(context());
+    const doors = [...view.querySelectorAll<HTMLElement>('.door')];
+    // closed/today doors: no number overlay (photos carry the number)
+    expect(doors[10].querySelector('.door-number')).toBeNull();
+    expect(doors[4].querySelector('.door-number')).toBeNull();
+    // opened doors: small corner chip next to the preview
+    expect(doors[0].querySelector('.door-number')?.textContent).toBe('1');
+    expect(doors[3].querySelector('.door-number')?.textContent).toBe('4');
+  });
+
   it('shows door previews only for opened doors, via each entry type', () => {
     const view = renderCalendar(context());
     const openedSong = view.querySelectorAll<HTMLElement>('.door')[3];
@@ -95,6 +106,27 @@ describe('renderCalendar', () => {
     );
     const status = view.querySelector('.cal-status')?.textContent ?? '';
     expect(status).toContain('abwarten und Tee trinken');
+  });
+
+  it('replaces the teaser with a dev status under the dev flag outside December', () => {
+    const view = renderCalendar(
+      context({
+        season: { year: 2026, phase: 'upcoming' },
+        now: new Date(2026, 10, 20),
+        config: { devUnlockAll: true },
+        state: {
+          version: 2,
+          year: 2026,
+          seed: 1,
+          openedDays: [2, 7],
+          lastVisit: '2026-11-20',
+        } satisfies SeasonState as SeasonState,
+      }),
+    );
+    const status = view.querySelector('.cal-status')?.textContent ?? '';
+    expect(status).not.toContain('abwarten und Tee trinken');
+    expect(status).toContain('Dev-Modus');
+    expect(status).toContain('2 geöffnet');
   });
 
   it('wires the reset button through onReset after confirmation', () => {

@@ -25,8 +25,12 @@ export interface CalendarContext {
 }
 
 function seasonStatus(ctx: CalendarContext): string {
-  const { season, state, now } = ctx;
+  const { season, state, now, config } = ctx;
   if (season.phase === 'upcoming') {
+    // The dev flag keeps the grid usable outside December — don't tease.
+    if (config.devUnlockAll) {
+      return `Dev-Modus: alle ${DOOR_COUNT} Türchen sind testweise offen (${state.openedDays.length} geöffnet).`;
+    }
     return 'Alle 24 Türchen sind noch zu — abwarten und Tee trinken… ☕';
   }
   if (isSeasonEnded(season.year, now)) {
@@ -79,10 +83,13 @@ function renderDoor(ctx: CalendarContext, day: number): HTMLElement {
     }),
   ]);
 
-  const children: (Node | null)[] = [photo, h('span', { class: 'door-number', text: String(day) })];
+  // Number overlays: the closed-door artwork carries the printed number, so
+  // only opened doors get a corner number chip.
+  const children: (Node | null)[] = [photo];
 
   if (preview) {
     children.push(
+      h('span', { class: 'door-number', text: String(day) }),
       h('div', { class: 'door-preview' }, [
         ...(preview.label ? [h('span', { class: 'door-preview-label', text: preview.label })] : []),
         h('span', { class: 'door-preview-title', text: preview.title }),
