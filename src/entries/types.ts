@@ -25,6 +25,10 @@ export interface TextPayload {
 
 export type EntryType = 'song' | 'text';
 
+/** All registered entry types — kept in one place so validation, schemas,
+ * and the registry can never drift apart. */
+export const ENTRY_TYPES = ['song', 'text'] as const satisfies readonly EntryType[];
+
 /** The registry entry for a given type. */
 export type EntryOf<K extends EntryType> = Extract<CalendarEntry, { type: K }>;
 /** The payload of a given entry type. */
