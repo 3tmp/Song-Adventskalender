@@ -104,6 +104,20 @@ function renderDoor(ctx: CalendarContext, day: number): HTMLElement {
   return button;
 }
 
+/** Deterministic CSS-only snow — subtle, motion that respects reduced-motion. */
+function snowLayer(): HTMLElement {
+  const flakes = Array.from({ length: 14 }, (_, i) => {
+    const flake = h('span', { class: 'flake', text: i % 3 === 0 ? '❅' : '❄' });
+    flake.style.left = `${(i * 137) % 100}%`;
+    flake.style.fontSize = `${(0.55 + (i % 5) * 0.25).toFixed(2)}rem`;
+    flake.style.setProperty('--flake-duration', `${(9 + (i % 7) * 1.9).toFixed(1)}s`);
+    flake.style.setProperty('--flake-delay', `-${(i * 1.9).toFixed(1)}s`);
+    flake.style.setProperty('--flake-drift', `${(i % 2 ? -1 : 1) * (12 + (i % 6) * 9)}px`);
+    return flake;
+  });
+  return h('div', { class: 'snow' }, flakes);
+}
+
 export function renderCalendar(ctx: CalendarContext): HTMLElement {
   const doors = Array.from({ length: DOOR_COUNT }, (_, i) => renderDoor(ctx, i + 1));
 
@@ -119,6 +133,7 @@ export function renderCalendar(ctx: CalendarContext): HTMLElement {
   });
 
   return h('div', { class: 'view view-calendar' }, [
+    snowLayer(),
     h('header', { class: 'cal-header' }, [
       h('p', { class: 'cal-brand', text: 'Song-Adventskalender' }),
       h('h1', { class: 'cal-year', text: `Advent ${ctx.season.year}` }),
