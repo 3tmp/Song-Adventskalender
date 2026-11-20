@@ -1,0 +1,22 @@
+{
+  "name": "song-adventskalender",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Fully static, single-page song advent calendar — 100% client-side.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest run --passWithNoTests",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1"
+  }
+}
