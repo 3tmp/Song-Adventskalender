@@ -27,7 +27,7 @@ function context(overrides: Partial<CalendarContext> = {}): CalendarContext {
       lastVisit: '2026-12-05',
     } satisfies SeasonState as SeasonState,
     now: new Date(2026, 11, 5),
-    config: { devUnlockAll: false },
+    config: { devUnlockAll: false, devOpenAll: false },
     onOpen: vi.fn(),
     onReset: vi.fn(),
     ...overrides,
@@ -95,7 +95,7 @@ describe('renderCalendar', () => {
   });
 
   it('marks everything openable under the dev flag', () => {
-    const ctx = context({ config: { devUnlockAll: true } });
+    const ctx = context({ config: { devUnlockAll: true, devOpenAll: false } });
     const view = renderCalendar(ctx);
     const future = view.querySelectorAll<HTMLElement>('.door')[20];
     expect(future.classList.contains('door--sealed')).toBe(false);
@@ -116,7 +116,7 @@ describe('renderCalendar', () => {
       context({
         season: { year: 2026, phase: 'upcoming' },
         now: new Date(2026, 10, 20),
-        config: { devUnlockAll: true },
+        config: { devUnlockAll: true, devOpenAll: false },
         state: {
           version: 2,
           year: 2026,

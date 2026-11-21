@@ -9,7 +9,7 @@ import { availableYears, getDayEntry, getYearContent, seasonEntryOrder } from '.
 import { createSeasonStore, type SeasonState } from './core/state';
 import { resolveSeason } from './core/season';
 import { createRouter, type Route } from './core/router';
-import { isDayUnlocked } from './core/unlock';
+import { isDayUnlocked, DOOR_COUNT } from './core/unlock';
 import { h } from './dom';
 import type { YearContent } from './entries/types';
 import { renderCalendar } from './views/calendar';
@@ -55,11 +55,17 @@ async function boot(): Promise<void> {
   const renderGrid = (): void => {
     unmountDayView();
     const entries = seasonEntryOrder(content, state.seed);
+    // Hidden dev flag `?dev=open`: pretend every door has already been
+    // opened. View-only derivation — the persisted season state stays honest,
+    // so a reload without the flag shows the real progress again.
+    const viewState: SeasonState = config.devOpenAll
+      ? { ...state, openedDays: Array.from({ length: DOOR_COUNT }, (_, i) => i + 1) }
+      : state;
     app.replaceChildren(
       renderCalendar({
         season,
         entries,
-        state,
+        state: viewState,
         now,
         config,
         onOpen(day) {

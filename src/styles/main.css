@@ -230,6 +230,15 @@ button {
   }
 }
 
+/* very narrow viewports (heavy zoom / big system scaling): one column so
+   every door — including its caption — keeps enough breathing room */
+
+@media (max-width: 379px) {
+  .cal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* doors */
 
 .door {
@@ -396,6 +405,31 @@ button {
 .door-preview-subtitle {
   font-size: 0.7rem;
   color: var(--bg-dim);
+}
+
+/* small screens: bigger number chip and caption — they must stay readable
+   even when a phone grid fits only two doors per row */
+
+@media (max-width: 719px) {
+  .door-number {
+    font-size: 2rem;
+  }
+
+  .door-preview {
+    gap: 0.16rem;
+  }
+
+  .door-preview-label {
+    font-size: 0.7rem;
+  }
+
+  .door-preview-title {
+    font-size: 1.02rem;
+  }
+
+  .door-preview-subtitle {
+    font-size: 0.85rem;
+  }
 }
 
 /* hover & focus for openable doors */
