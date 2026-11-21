@@ -58,19 +58,22 @@ describe('renderCalendar', () => {
     // closed/today doors: no number overlay (photos carry the number)
     expect(doors[10].querySelector('.door-number')).toBeNull();
     expect(doors[4].querySelector('.door-number')).toBeNull();
-    // opened doors: small corner chip next to the preview
+    // opened doors: corner chip on the opened photo
     expect(doors[0].querySelector('.door-number')?.textContent).toBe('1');
     expect(doors[3].querySelector('.door-number')?.textContent).toBe('4');
   });
 
-  it('shows door previews only for opened doors, via each entry type', () => {
+  it('shows door preview captions only for opened doors, below the image', () => {
     const view = renderCalendar(context());
-    const openedSong = view.querySelectorAll<HTMLElement>('.door')[3];
-    const openedText = view.querySelectorAll<HTMLElement>('.door')[0];
+    const cells = [...view.querySelectorAll<HTMLElement>('.door-cell')];
+    const openedSong = cells[3];
+    const openedText = cells[0];
     expect(openedSong.querySelector('.door-preview-title')?.textContent).toBe('Song 4');
     expect(openedSong.querySelector('.door-preview-subtitle')?.textContent).toBe('Artist 4');
     expect(openedText.querySelector('.door-preview-label')?.textContent).toBe('Impuls');
     expect(openedText.querySelector('.door-preview-title')?.textContent).toBe('Impuls 1');
+    // caption sits below the image, never as an overlay on the door
+    expect(openedSong.querySelector('.door .door-preview')).toBeNull();
     expect(view.querySelectorAll('.door-preview')).toHaveLength(2);
   });
 

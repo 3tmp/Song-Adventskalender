@@ -84,20 +84,12 @@ function renderDoor(ctx: CalendarContext, day: number): HTMLElement {
   ]);
 
   // Number overlays: the closed-door artwork carries the printed number, so
-  // only opened doors get a corner number chip.
+  // only opened doors get a corner number chip. Label and title live below
+  // the image (see .door-preview), not on it.
   const children: (Node | null)[] = [photo];
 
-  if (preview) {
-    children.push(
-      h('span', { class: 'door-number', text: String(day) }),
-      h('div', { class: 'door-preview' }, [
-        ...(preview.label ? [h('span', { class: 'door-preview-label', text: preview.label })] : []),
-        h('span', { class: 'door-preview-title', text: preview.title }),
-        ...(preview.subtitle
-          ? [h('span', { class: 'door-preview-subtitle', text: preview.subtitle })]
-          : []),
-      ]),
-    );
+  if (opened) {
+    children.push(h('span', { class: 'door-number', text: String(day) }));
   } else if (status === 'today') {
     children.push(h('span', { class: 'door-today-badge', text: '✨ heute' }));
   }
@@ -126,7 +118,21 @@ function renderDoor(ctx: CalendarContext, day: number): HTMLElement {
     }
   });
 
-  return button;
+  // Caption below the image — label, title and (for songs) artist.
+  const cellChildren: (Node | null)[] = [button];
+  if (preview) {
+    cellChildren.push(
+      h('div', { class: 'door-preview' }, [
+        ...(preview.label ? [h('span', { class: 'door-preview-label', text: preview.label })] : []),
+        h('span', { class: 'door-preview-title', text: preview.title }),
+        ...(preview.subtitle
+          ? [h('span', { class: 'door-preview-subtitle', text: preview.subtitle })]
+          : []),
+      ]),
+    );
+  }
+
+  return h('div', { class: 'door-cell' }, cellChildren);
 }
 
 /** Deterministic CSS-only snow — subtle, motion that respects reduced-motion. */
