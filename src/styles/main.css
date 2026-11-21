@@ -1,5 +1,5 @@
 /*
-   Song-Adventskalender v2 — warm winter design.
+   Song-Adventskalender v2 — light frosty winter design.
    Hand-written modern CSS: custom properties, keyframe motion (all
    disabled under prefers-reduced-motion), no framework.
 */
@@ -7,20 +7,22 @@
 /* ------------------------------------------------------------------ tokens */
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 
-  /* warm winter palette */
-  --bg-0: #241631;
-  --bg-1: #341f45;
-  --bg-2: #1d1129;
+  /* light winter palette around #bee2e2 */
+  --bg-0: #a6cfcf;
+  --bg-1: #bde4e4;
+  --bg-2: #8fc2c2;
   --card: #fdf6ec;
   --card-1: #f3e6d3;
   --cream: #f6ecdf;
   --ink: #33221c;
   --ink-dim: #6b5240;
-  --on-dark-dim: #cabba9;
+  --ink-bg: #1f3d3c; /* primary text on the light background */
+  --bg-dim: #4a6a69; /* dimmed text on the light background */
   --gold: #e6b463;
   --gold-deep: #c69140;
+  --gold-ink: #8a5f14; /* gold-grade text on the light background */
   --red: #963431;
   --red-deep: #7a2a28;
   --pine: #2e5145;
@@ -32,8 +34,8 @@
 
   --radius: 16px;
   --radius-sm: 10px;
-  --shadow-door: 0 10px 24px rgba(16, 8, 26, 0.45);
-  --shadow-pop: 0 18px 42px rgba(16, 8, 26, 0.55);
+  --shadow-door: 0 10px 24px rgba(20, 52, 54, 0.28);
+  --shadow-pop: 0 18px 42px rgba(20, 52, 54, 0.35);
   --speed: 260ms;
 }
 
@@ -83,10 +85,10 @@ body {
   margin: 0;
   min-height: 100svh;
   font-family: var(--font-body);
-  color: var(--cream);
+  color: var(--ink-bg);
   background:
-    radial-gradient(1200px 800px at 80% -10%, rgba(230, 180, 99, 0.09), transparent 60%),
-    radial-gradient(900px 700px at 10% 110%, rgba(46, 81, 69, 0.35), transparent 55%),
+    radial-gradient(1200px 800px at 80% -10%, rgba(255, 255, 255, 0.3), transparent 60%),
+    radial-gradient(900px 700px at 10% 110%, rgba(46, 81, 69, 0.16), transparent 55%),
     linear-gradient(160deg, var(--bg-1), var(--bg-0) 55%, var(--bg-2));
   background-attachment: fixed;
 }
@@ -105,7 +107,7 @@ button {
 }
 
 :focus-visible {
-  outline: 2px solid var(--gold);
+  outline: 2px solid var(--gold-ink);
   outline-offset: 2px;
 }
 
@@ -122,8 +124,8 @@ button {
 .snow .flake {
   position: absolute;
   top: -6vh;
-  color: rgba(246, 236, 223, 0.55);
-  text-shadow: 0 0 6px rgba(246, 236, 223, 0.25);
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 0 6px rgba(126, 168, 168, 0.6);
   user-select: none;
   animation: flake-fall 14s linear infinite;
   animation-duration: var(--flake-duration, 14s);
@@ -173,7 +175,7 @@ button {
   font-weight: 600;
   letter-spacing: 0.42em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 
 .cal-year {
@@ -182,7 +184,7 @@ button {
   font-weight: 600;
   font-size: clamp(2rem, 6vw, 3.4rem);
   letter-spacing: 0.01em;
-  background: linear-gradient(180deg, #f9edd9, var(--gold) 70%);
+  background: linear-gradient(180deg, var(--gold-deep), var(--gold-ink) 70%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -193,7 +195,7 @@ button {
   max-width: 42rem;
   font-size: 1.02rem;
   line-height: 1.55;
-  color: var(--on-dark-dim);
+  color: var(--bg-dim);
 }
 
 /* the grid of doors — responsive from 2 up to 8 columns */
@@ -318,8 +320,8 @@ button {
 .door--today {
   border-radius: var(--radius);
   box-shadow:
-    0 0 0 2px var(--gold),
-    0 0 26px rgba(230, 180, 99, 0.5),
+    0 0 0 2px var(--gold-deep),
+    0 0 26px rgba(230, 180, 99, 0.55),
     var(--shadow-door);
   animation: door-pulse 2.6s ease-in-out infinite;
 }
@@ -328,14 +330,14 @@ button {
   0%,
   100% {
     box-shadow:
-      0 0 0 2px var(--gold),
-      0 0 18px rgba(230, 180, 99, 0.35),
+      0 0 0 2px var(--gold-deep),
+      0 0 18px rgba(230, 180, 99, 0.4),
       var(--shadow-door);
   }
   50% {
     box-shadow:
-      0 0 0 2px var(--gold),
-      0 0 34px rgba(230, 180, 99, 0.6),
+      0 0 0 2px var(--gold-deep),
+      0 0 34px rgba(230, 180, 99, 0.7),
       var(--shadow-door);
   }
 }
@@ -434,7 +436,7 @@ button {
   margin: 0 auto;
   max-width: 40rem;
   font-size: 0.85rem;
-  color: rgba(202, 187, 169, 0.7);
+  color: rgba(31, 61, 60, 0.65);
 }
 
 .cal-reset {
@@ -445,12 +447,12 @@ button {
   font-size: 0.8rem;
   text-decoration: underline dotted;
   text-underline-offset: 3px;
-  color: rgba(202, 187, 169, 0.55);
+  color: rgba(31, 61, 60, 0.5);
   cursor: pointer;
 }
 
 .cal-reset:hover {
-  color: rgba(246, 236, 223, 0.85);
+  color: rgba(31, 61, 60, 0.85);
 }
 
 /* --------------------------------------------------------------- day view */
@@ -491,11 +493,11 @@ button {
   height: 2.6rem;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(246, 236, 223, 0.25);
+  border: 1px solid rgba(31, 61, 60, 0.22);
   border-radius: 50%;
-  background: rgba(29, 17, 41, 0.75);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(6px);
-  color: var(--cream);
+  color: var(--ink-bg);
   font-size: 1.05rem;
   cursor: pointer;
   transition:
@@ -504,7 +506,7 @@ button {
 }
 
 .day-close:hover {
-  background: rgba(52, 31, 69, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   transform: scale(1.06);
 }
 
@@ -516,7 +518,7 @@ button {
   font-weight: 600;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 
 .day-body {
@@ -553,7 +555,7 @@ button {
   font-size: clamp(1.35rem, 4.2vw, 1.9rem);
   line-height: 1.35;
   text-align: center;
-  color: #f9edd9;
+  color: var(--ink-bg);
   text-wrap: balance;
 }
 
@@ -575,20 +577,20 @@ button {
   font-family: var(--font-display);
   font-weight: 600;
   font-size: clamp(1.25rem, 3.6vw, 1.7rem);
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 
 .song-artist {
   margin: 0.3rem 0 0;
   font-size: 1rem;
-  color: var(--on-dark-dim);
+  color: var(--bg-dim);
 }
 
 .entry-text {
   margin: 0;
   font-size: 1.03rem;
   line-height: 1.75;
-  color: #eadfd2;
+  color: #33504f;
   white-space: pre-line;
 }
 
@@ -606,16 +608,16 @@ button {
   min-height: 13.5rem;
   border-radius: var(--radius-sm);
   overflow: hidden;
-  background: linear-gradient(165deg, rgba(46, 81, 69, 0.35), rgba(29, 17, 41, 0.55));
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.5), rgba(165, 211, 212, 0.6));
   box-shadow: var(--shadow-door);
 }
 
 .embed-load {
   padding: 0.7rem 1.3rem;
-  border: 1px solid rgba(230, 180, 99, 0.55);
+  border: 1px solid var(--gold-deep);
   border-radius: 999px;
-  background: rgba(29, 17, 41, 0.8);
-  color: var(--gold);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--gold-ink);
   font-weight: 600;
   letter-spacing: 0.02em;
   cursor: pointer;
@@ -625,7 +627,7 @@ button {
 }
 
 .embed-load:hover {
-  background: rgba(52, 31, 69, 0.95);
+  background: rgba(255, 255, 255, 0.98);
   transform: scale(1.04);
 }
 
@@ -642,10 +644,10 @@ button {
   display: block;
   margin: 1.75rem auto 0;
   padding: 0.6rem 1.4rem;
-  border: 1px solid rgba(230, 180, 99, 0.4);
+  border: 1px solid rgba(138, 95, 20, 0.4);
   border-radius: 999px;
   background: none;
-  color: var(--gold);
+  color: var(--gold-ink);
   font-weight: 600;
   cursor: pointer;
   transition:
@@ -654,7 +656,7 @@ button {
 }
 
 .day-prev:hover {
-  background: rgba(230, 180, 99, 0.12);
+  background: rgba(138, 95, 20, 0.08);
   transform: translateX(-3px);
 }
 
@@ -666,21 +668,21 @@ button {
   gap: 0.5rem;
   text-align: center;
   padding: 2rem;
-  color: var(--cream);
+  color: var(--ink-bg);
 }
 
 .view-empty h1 {
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.8rem;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 
 .view-empty p {
   margin: 0;
   max-width: 34rem;
   line-height: 1.6;
-  color: var(--on-dark-dim);
+  color: var(--bg-dim);
 }
 
 /* ------------------------------------------------------------------ toast */
@@ -692,11 +694,11 @@ button {
   z-index: 50;
   max-width: min(88vw, 30rem);
   padding: 0.7rem 1.25rem;
-  border: 1px solid rgba(230, 180, 99, 0.35);
+  border: 1px solid rgba(138, 95, 20, 0.3);
   border-radius: 999px;
-  background: rgba(29, 17, 41, 0.92);
+  background: rgba(255, 255, 255, 0.95);
   box-shadow: var(--shadow-pop);
-  color: var(--cream);
+  color: var(--ink-bg);
   font-size: 0.95rem;
   text-align: center;
   opacity: 0;
