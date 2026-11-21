@@ -69,6 +69,6 @@ November/Dezember ohne Zeitreise).
 
 ## Lizenz / Credits
 
-Fotos & Icons aus [Song-Adventskalender v1](https://github.com/3tmp/Song-Adventskalender).
+Fotos & Icons sind selbst erstellt.
 Song Embeds: YouTube (privacy-enhanced, nocookie) und Spotify — die App
 hostet selbst keine Musik.
