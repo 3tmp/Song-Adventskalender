@@ -1,0 +1,8 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Door artwork originals are regenerated from the v1 repo (see README):
+# only the processed WebP/JPEG in public/img ship in this repo.
+assets-src/door*.jpg
