@@ -20,7 +20,9 @@ npm run fonts        # woff2-Fontsubsets aus assets-src/fonts neu erzeugen
 ```
 
 Versteckte Dev-Flags: `?dev=all` schaltet alle Türchen frei (Test im
-November/Dezember ohne Zeitreise).
+November/Dezember ohne Zeitreise); `?dev=open` schaltet sie zusätzlich alle auf
+„geöffnet“ in der Übersicht — rein zur Anzeige, der gespeicherte Fortschritt
+bleibt unverändert.
 
 ## Architektur in Kürze
 

@@ -68,4 +68,25 @@ describe('app boot', () => {
     );
     expect(backReady).toBe(true);
   });
+
+  it('shows every door as opened under the dev open-all flag, without persisting', async () => {
+    history.replaceState(null, '', `${location.pathname}?dev=open`);
+    vi.resetModules();
+
+    await import('./main');
+    const gridReady = await waitFor(() => document.querySelector('.view-calendar') !== null);
+    expect(gridReady).toBe(true);
+
+    const doors = [...document.querySelectorAll<HTMLElement>('.door')];
+    expect(doors).toHaveLength(24);
+    for (const door of doors) {
+      expect(door.classList.contains('door--opened')).toBe(true);
+      expect(door.classList.contains('door--sealed')).toBe(false);
+    }
+
+    // The opened-all view is derived only — the persisted state stays honest.
+    const year = resolveSeason(new Date()).year;
+    const raw = window.localStorage.getItem(`sak.${year}`);
+    expect(raw && JSON.parse(raw).openedDays).toEqual([]);
+  });
 });
