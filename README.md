@@ -17,6 +17,7 @@ npm test             # Vitest (Logik + jsdom-Smoketests)
 npm run build        # Inhaltsvalidierung + tsc + vite build → dist/
 npm run preview      # statischen Build lokal ansehen
 npm run fonts        # woff2-Fontsubsets aus assets-src/fonts neu erzeugen
+npm run doors        # WebP/JPEG-Versionen in public/img aus assets-src/doors erzeugen
 ```
 
 Versteckte Dev-Flags: `?dev=all` schaltet alle Türchen frei (Test im
@@ -63,6 +64,8 @@ bleibt unverändert.
   (Offline-Modus ist einer der offenen Punkte des Plans).
 - Fonts: selbstgehostete woff2-Subsets (`public/fonts`), Quell-TTFs
   vendort in `assets-src/fonts`; Regenerierung via `npm run fonts`.
+- Türbilder: Original-JPEGs vendert in `assets-src/doors`, die ausgelieferten
+  WebP/JPEG-Versionen in `public/img/doors` regeneriert via `npm run doors`.
 - Kein Analyse-Tracking.
 - **Performance**: Pro Seitenaufruf lädt nur der aktive Jahres-Chunk
   (Archiv-Buttons laden lazy via Deep Link); Logik+CSS ≈ 10 kB gzip,
