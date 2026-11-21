@@ -37,7 +37,6 @@ export function renderDayView(ctx: DayContext): DayView {
   const closeButton = h('button', {
     class: 'day-close',
     attrs: { 'aria-label': 'Zurück zum Kalender', type: 'button' },
-    text: '✕',
   });
   closeButton.addEventListener('click', () => ctx.onBack());
 

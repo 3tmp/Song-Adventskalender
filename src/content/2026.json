@@ -4,11 +4,14 @@
   "entries": [
     {
       "day": 1,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 1",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 1. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "Terminator",
+        "artist": "King Promise feat. Young Jonn",
+        "quote": "And my happiness comes first, I never come life to stress",
+        "text": "Diese Liedzeile verdeutlicht sehr schön, wie man Prioritäten setzen kann – die Freude gegenüber anderen Verpflichtungen wählen. Versuche doch heute mal, gelassener und bewusst zu handeln, anstatt hektisch durch den Alltag von Termin zu Termin zu sprinten. Infolge dessen fühlt man sich nicht nur entspannter, sondern die Aufgaben wirken bewältigbarer, was ja wiederum Wohlbefinden und die Freude erhöht.",
+        "spotifyId": "1oq33HJBs0rDmjjZ2rVFyG",
+        "youtubeId": "NPCC02SaJVg"
       }
     },
     {

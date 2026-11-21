@@ -303,12 +303,12 @@ button {
 
 .door-number {
   position: absolute;
-  top: 0.5rem;
+  top: 0.1rem;
   left: 0.65rem;
   z-index: 3;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(1.55rem, 3.6vw, 1.9rem);
+  font-size: clamp(1.9rem, 4.4vw, 2.4rem);
   color: rgba(246, 236, 223, 0.92);
   text-shadow: 0 2px 10px rgba(16, 8, 26, 0.9);
   pointer-events: none;
@@ -412,7 +412,7 @@ button {
 
 @media (max-width: 719px) {
   .door-number {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .door-preview {
@@ -531,18 +531,38 @@ button {
   z-index: 10;
   width: 2.6rem;
   height: 2.6rem;
-  display: grid;
-  place-items: center;
   border: 1px solid rgba(31, 61, 60, 0.22);
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(6px);
   color: var(--ink-bg);
-  font-size: 1.05rem;
   cursor: pointer;
   transition:
     transform var(--speed) ease,
     background var(--speed) ease;
+}
+
+/* the ✕ is drawn as two centered bars — glyphs like U+2715 sit optically
+   off-center in most fonts, these land exactly in the middle */
+
+.day-close::before,
+.day-close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0.62rem;
+  right: 0.62rem;
+  height: 2px;
+  border-radius: 1px;
+  background: currentColor;
+}
+
+.day-close::before {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.day-close::after {
+  transform: translateY(-50%) rotate(-45deg);
 }
 
 .day-close:hover {
