@@ -698,6 +698,22 @@ button {
   border: 0;
 }
 
+/* The Spotify track embed (/embed/track/…) renders at a fixed height and
+   never stretches to fill the iframe — Spotify's embed code maps the
+   default "landscape" layout to 152px (verified against the embed bundle).
+   Size the card to that so no empty gradient strip shows below the player.
+   Spotify can change this third-party constant at any time: if the player
+   ever renders taller/shorter, adjust this single variable. */
+.embed-spotify {
+  --spotify-player-height: 152px;
+  min-height: var(--spotify-player-height);
+}
+
+.embed-spotify .embed-frame {
+  height: var(--spotify-player-height);
+  min-height: 0;
+}
+
 /* previous-day link */
 
 .day-prev {
