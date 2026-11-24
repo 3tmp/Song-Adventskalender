@@ -6,219 +6,288 @@
       "day": 1,
       "type": "song",
       "payload": {
-        "title": "Terminator",
-        "artist": "King Promise feat. Young Jonn",
-        "quote": "And my happiness comes first, I never come life to stress",
-        "text": "Diese Liedzeile verdeutlicht sehr schön, wie man Prioritäten setzen kann – die Freude gegenüber anderen Verpflichtungen wählen. Versuche doch heute mal, gelassener und bewusst zu handeln, anstatt hektisch durch den Alltag von Termin zu Termin zu sprinten. Infolge dessen fühlt man sich nicht nur entspannter, sondern die Aufgaben wirken bewältigbarer, was ja wiederum Wohlbefinden und die Freude erhöht.",
-        "spotifyId": "1oq33HJBs0rDmjjZ2rVFyG",
-        "youtubeId": "NPCC02SaJVg"
+        "title": "Price Tag",
+        "artist": "Jessie J, B.o.B",
+        "quote": "Why is everybody so obsessed? Money can’t buy us happiness. Can we all slow down and enjoy right now?",
+        "text": "Diese Liedzeilen verdeutlichen, was wir wohl alle schon oft gehört haben: Mit Geld kann man langanhaltendes, erfüllendes Glück und Freude nicht kaufen. Denn was hat man davon, wenn man zwar am Ende des Lebens Geld oder materielle Güter mühsam erarbeitet und angespart hat, aber das Leben währenddessen an einem vorbeigezogen ist? Manchmal denke ich, es geht darum, das Leben im Hier und Jetzt einfach zu genießen. Denn jeder Moment kommt nur einmal in unserem Leben – und jeder Moment hat ein besonderes Potenzial. „In den schönen Momenten die Unendlichkeit erkennen“, das hat einmal jemand zu mir gesagt und ich finde das einen wunderschönen Impuls für den heutigen Tag!",
+        "spotifyId": "2fTsFCKRFQ5M0igJgabnLA",
+        "youtubeId": "qMxX-QOV9tI"
       }
     },
     {
       "day": 2,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 2",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 2. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "Mbangu te",
+        "artist": "Ya Levis",
+        "quote": "Pas à pas, n’y que comme ça qu’on avancera",
+        "text": "Ich mag dieses Lied ganz besonders, weil es eine tolle Message beinhaltet, nämlich die Dinge langsam anzugehen und nichts zu überstürzen. Übersetzt bedeuten die oben genannten Zeilen so viel wie: „Schritt für Schritt ist der einzige Weg, wie man vorankommt“. Dem kann ich persönlich sehr viel abgewinnen. Oft scheint es, als wäre eine Hürde so groß und unüberwindbar, sodass man nicht weiß, wo man anfangen soll und Gefühle von Überforderung oder Angst verspürt. In der Psychologie spricht man dann von einer Krise, wenn man die aktuellen Herausforderungen als nicht bewältigbar wahrnimmt, wenn man also z.B. ein Gefühl von innerer Hilflosigkeit verspürt. Hier gilt es, das „Problem“ in viele kleine „Teilprobleme“ zu zerlegen und eines nach dem anderen zu bearbeiten. Geht man Schritt für Schritt eine Etappe, erscheint der Berg an Herausforderungen nicht mehr so hoch. Daher möchte ich dir heute diese Frage mitgeben: Welche Herausforderungen stellen sich dir gerade? Wie kannst du diese in möglichst viele kleine Teiletappen unterteilen? Wie kannst du dir daher mehr Gelassenheit und Ruhe mit in deinen Alltag nehmen?",
+        "spotifyId": "1gj03i17mXMsjda2gi5wd7",
+        "youtubeId": "XVkkuTwaXgY"
       }
     },
     {
       "day": 3,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 3",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 3. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "Grow",
+        "artist": "KAMRAD",
+        "quote": "This is how we grow, we don’t have to be afraid to change",
+        "text": "„Wir müssen keine Angst vor der Veränderung haben“, heißt es in diesem Lied von KAMRAD. Denn gerade durch die Veränderung können wir wachsen und uns weiterentwickeln. Ich vergleiche das Leben gerne mit einem Fluss: Mal fließt er schnell, mal langsamer, mal macht er eine Kurve, mal wird er zum Wasserfall. Der Fluss ist ständig in Bewegung und bahnt sich seinen Weg durch die Landschaft. Genauso denke ich, ist es doch auch mit dem Leben: Die Lebensumstände sind permanent im Wandel. Würden wir vehement versuchen, stehenzubleiben oder uns an einem Punkt festzuklammern, würde uns die Strömung wohl übermannen und unkontrolliert mitreißen. Daher gilt es wohl, mit dem Fluss zu gehen und sich auf die Wendungen des Lebens einzulassen. Heraklit sagte bereits: „Nichts ist so beständig wie der Wandel“. Und wenn wir begriffen haben, dass der konstante Wandel – also die Veränderung – zu unserem Wachstum beiträgt, müssen wir doch auch keine Angst davor haben, oder? Und dann merken wir, dass wir vor allem dann wachsen, wenn wir unser Ändern leben (anstatt immer nur zu sagen, wir müssen unser Leben ändern).",
+        "spotifyId": "4p271nBOC4vmmbbLsjRjE5",
+        "youtubeId": "B_b8Psmdd3c"
       }
     },
     {
       "day": 4,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 4",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 4. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "We Pray",
+        "artist": "Coldplay feat. Little Simz, Burna Boy, Elyanna & TINI",
+        "quote": "I pray that love will shelter us from our fears",
+        "text": "Liebe ist wohl eine der mächtigsten Kräfte, die auf dieser Welt existiert. Es gibt wenig andere emotionale Zustände, die sich für uns Menschen so wohltuend anfühlen und uns Kraft, Hoffnung, Zuversicht, Geborgenheit, Zugehörigkeit und Sicherheit geben können wie die Liebe. Liebe ist das Gegenteil von Angst. Das Allerschönste dabei ist, dass man, um jemandem Liebe zu schenken oder empfangen zu können, kein Wissen, keine Ausbildung oder keine besonderen Fähigkeiten braucht. Liebe ist einfach! Denk einmal darüber nach, welche unvergesslichen Momente du schon erlebt hast, die von Liebe begleitet waren? Und damit meine ich nicht zwingend die romantische Liebe. Liebe kann auch seiner Familie gegenüber empfunden werden, seinen Freundinnen und Freunden, seinen Haustieren oder sogar auch fremden Menschen gegenüber. Setzte es dir doch heute zur Aufgabe, einem Menschen aufrichtig Liebe und damit Schutz und Sicherheit zu geben! Auf welche Weise kannst du dieser Person Liebe schenken? Durch ein liebes Kompliment, eine Umarmung, ein wertschätzendes Zuhören oder auf ganz anderem Wege? Du wirst merken, dass sich das Schenken von Liebe nicht nur für deine/n Empfänger/in gut anfühlt, sondern auch für dich selbst. Denn Liebe erhöht sich, wenn man sie teilt. Viel Freude dabei!",
+        "spotifyId": "6xX6zmaXeKzB4u9TiM1XgU",
+        "youtubeId": "knIbwsNGJyc"
       }
     },
     {
       "day": 5,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 5",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 5. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "The nights",
+        "artist": "Avicii",
+        "quote": "He said “One day you’ll leave this world behind, so live a life you will remember”.",
+        "text": "In diesem Lied gibt ein Vater seinem Sohn den Rat, ein Leben voll Abenteuern und unvergesslichen Momenten zu führen, an das er sich erinnern wird. Ein sehr schöner Rat wie ich finde. Interessanterweise ist das auch derselbe Rat, den viele ältere Menschen ihrem jüngeren Ich mitgeben würden, wenn sie auf ihr Leben zurückblicken. Hätte ich doch nur mehr mein Leben genossen… Eine der fünf Wahrheiten in John Izzos Buch „Die 5 Geheimnisse, die Sie entdecken müssen, bevor Sie sterben“ sagt daher auch: Lebe mehr im Augenblick und genieße ihn. Als Inspiration für heute möchte ich dir noch abschließend das Zitat von Giovanni Boccaccio mitgeben: „Es ist besser zu genießen und zu bereuen, als zu bereuen, dass man nicht genossen hat“. Damit wünsche ich dir einen wunderschönen Tag – und vielleicht kannst du ja heute mehrmals während des Tages innehalten und den Augenblick genießen.",
+        "spotifyId": "0ct6r3EGTcMLPtrXHDvVjc",
+        "youtubeId": "UtF6Jej8yb4"
       }
     },
     {
       "day": 6,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 6",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 6. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "Eastside",
+        "artist": "Halsey, Khalid, benny blanco",
+        "quote": "We can do anything if we put our minds to it",
+        "text": "„Wir können alles schaffen, wenn wir uns auf eine Sache konzentrieren“ – das ist die Botschaft dieses Lieds. Diese Message finde ich sehr inspirierend, weil sie motiviert, die eigenen Träume und Ziele hoch zu stecken und sich dabei nicht einschüchtern zu lassen. Wir sind das, was wir wiederholt tun, sagte auch bereits Aristoteles. Hinter diesem Zitat steckt in meinen Augen sehr viel Selbstermächtigung. Wir sind nicht nur auf unsere vererbten Gene beschränkt – im Gegenteil: wir können unsere DNA im Sinne der Epigenetik durch neue Gewohnheiten stets verändern! In der Neurowissenschaft wird außerdem das Phänomen der Neuroplastizität beforscht. Tatsächlich verändern sich Gehirnstrukturen, wenn wir ein- und dieselbe Sache wiederholt tun oder denken. Das Gehirn verändert sich also in ihren Vernetzungen je nach Gewohnheit! Bei professionellen Klavierspieler/innen beispielsweise sind diejenigen Gehirnareale, die die motorischen Fingerbewegungen steuern, nachgewiesenermaßen größer sind als jene von Nichtmusiker/innen. Faszinierend, oder? Und was bedeutet das für uns? Wir können unser Gehirn langfristig verändern, indem wir neue Verhaltensweisen und Gewohnheiten etablieren und die Version von uns täglich leben, die wir sein wollen.",
+        "spotifyId": "7FGq80cy8juXBCD2nrqdWU",
+        "youtubeId": "56WBK4ZK_cw"
       }
     },
     {
       "day": 7,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 7",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 7. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "Low life",
+        "artist": "Dame",
+        "quote": "Viel zu oft ist alles hektisch um uns rum, […] und all der Stress ist nicht gesund. […] Gesundheit ist nicht alles, doch ohne Gesundheit ist alles nichts.",
+        "text": "Beinahe jede Zeile dieses Liedes würde sich für einen kurzen Impulstext eignen. Besonders hängen geblieben ist mir die Zeile „Gesundheit ist nicht alles, doch ohne Gesundheit ist alles nichts“. Es scheint, als wäre Gesundheit eines der wichtigsten Güter, über das wir Menschen verfügen können. Nicht nur aus körperlicher, sondern auch aus psychischer Sicht ist Stress oftmals die Hauptursache für viele Probleme. Chronischer Stress führt zu einer dauerhaften Ausschüttung von Stresshormonen, versetzt unseren Körper in Alarmbereitschaft und beeinträchtigt die körperliche und kognitive Leistungsfähigkeit. Auf emotionaler Ebene raubt uns Stress viele Ressourcen und ist verbunden mit Reizbarkeit, Angstzuständen oder Stimmungsschwankungen. Umso wichtiger ist es also, regelmäßig während des Alltags auf Pausen und Entspannung zu achten, denn ein gesunder, stressfreier Lebensstil legt die Basis für ein gutes Leben. Daher möchte ich dir heute folgende Reflexionsfragen für den Tag mitgeben: Was hast du heute Gutes für dich getan? Wie kannst du heute bewusst (und) gesund leben? Vielleicht ja durch Sport, ein gesundes Essen oder ein bereicherndes Gespräch. Hab einen wunderschönen Tag!",
+        "spotifyId": "1Y5T726CM5MZo9wvq8CQGK",
+        "youtubeId": "RwxZDl6P4E0"
       }
     },
     {
       "day": 8,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 8",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 8. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "Don’t you worry child",
+        "artist": "Swedish House Mafia",
+        "quote": "Don’t you worry child, see Heaven’s got a plan for you",
+        "text": "In diesem Lied geht es um Herausforderungen und Verlusterfahrungen im Leben, wobei der Protagonist immer daran erinnert wird, dass er sich keine Sorgen machen muss, da das Universum alles regeln wird. Das Lied thematisiert also ein gewisses Urvertrauen ins Leben. Ich mag das Wort „Vertrauen“ ganz besonders gerne. Denn wenn man es genauer betrachtet, merkt man, dass das Verb „trauen“ darin enthalten ist. Vertrauen ist also eine Form von Mut. Wenn man vertraut, hat man zum einen Zuversicht und glaubt, dass etwas Bestimmtes funktionieren oder passieren wird. Und zum anderen geht man auch ein Stück weit ein Risiko ein, weil man einen ungewissen Weg wählt. Ich finde, man darf es sich selbst hoch anrechnen, wenn man Ver-trauen in eine Person, eine Sache oder ins Leben hat! Vielleicht noch ein kleiner Impuls hin zu mehr Vertrauen anstelle von Sorgen: Manchmal lohnt es sich, einen Energie- bzw. Ressourcenvergleich zu machen. Verschwendest du gerade Energie und Zeit in das (vielleicht) irrationale Sorgen und Grübeln? Würde es vielleicht mehr Entspannung bringen, einfach loszulassen und zu vertrauen, dass alles kommt, wie es kommt? In diesem Sinne wünsche ich dir einen wunderschönen Tag!",
+        "spotifyId": "5tALkmrC4bRfrSDLimAzuq",
+        "youtubeId": "1y6smkh6c-0"
       }
     },
     {
       "day": 9,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 9",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 9. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "Zu Hause",
+        "artist": "Adel Tawil, Matisyahu",
+        "quote": "Komm, wir bring’n die Welt zum Leuchten, egal woher du kommst",
+        "text": "Ich finde den Schmetterlingseffekt ein faszinierendes Phänomen: Er erklärt, wie eine anfangs winzig kleine Änderung eine Kettenreaktion auslösen und langfristig enorme Auswirkungen auf ein gesamtes System haben kann. In der Meteorologie steht in diesem Zusammenhang die These, dass der bloße Flügelschlag eines Schmetterlings einen Tornado auf der anderen Seite der Welt auslösen kann. Auch in der Psychologie gibt es eine spannende Untersuchung zum Schmetterlingseffekt, die zeigt, dass das Glücksempfinden eng mit dem sozialen Umfeld zusammenhängt: Wenn ein/e Freund/in, der/die im Umkreis von 1,6km lebt, glücklich war, hat sich die Wahrscheinlichkeit um 25% erhöht, dass die untersuchte Person selbst auch glücklicher war. Kurzum: Glück kann sich in sozialen Gemeinschaften erhöhen. Ähnliches besagt das Phänomen der „emotionalen Ansteckung“, wonach die (positive) Stimmung einer Person das emotionale Befinden einer anderen Person beeinflussen kann. Stell dir also einmal vor, was du alles bewirken kannst, wenn du mit einer positiven und freundlichen Grundhaltung durch den Tag gehst. Du kannst dadurch nicht nur dein direktes Umfeld motivieren, sondern auch das Umfeld deines Umfelds! Wie passt das nun alles zum heutigen Lied? Wie die Liedzeile schon sagt – „Komm, wir bringen die Welt zum Leuchten“ – damit ist gemeint, dass bereits ein kleiner Impuls von dir eine große Wirkung haben kann!",
+        "spotifyId": "57bjVl0xXC96k5vy2rlVAv",
+        "youtubeId": "axmZ_5Rx4Go"
       }
     },
     {
       "day": 10,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 10",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 10. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "Hoch",
+        "artist": "Tim Bendzko",
+        "quote": "Wir gehen immer weiter hoch hinaus, egal wie hoch die Hürden auch sind",
+        "text": "Wie Tim Bendzko in seinem Lied sagt, findet Wachstum immer statt, insbesondere während herausfordernden Phasen. In der Psychologie ist mit dem Konzept der „Resilienz“ eine Art Widerstandsfähigkeit gemeint, eine Anpassungsfähigkeit, die uns hilft, mit schwierigen Situationen besser umgehen zu können. Ich habe einmal in diesem Kontext folgendes Zitat gehört: Ein Baum braucht erst Wind, um tiefe Wurzeln zu schlagen. Das bedeutet in meinen Augen so viel wie: Vor allem dann, wenn ein Baum unbeständigen Umweltbedingungen ausgesetzt ist, bildet er sein starkes Fundament aus. Vielleicht verhält es sich bei uns Menschen auch so und wir bauen erst unsere Wurzeln und unseren kräftigen Stamm, also unsere Identität, dann aus, wenn wir mit Hürden konfrontiert werden. Manchmal können Herausforderungen also auch zu unserer Entwicklung und unserem Wachstum beitragen, finde ich. Welche Herausforderungen stellen sich gerade in deinem Leben? Wie könnten sie dir zum Wachstum verhelfen?",
+        "spotifyId": "7gqefhSJfWyN1qQ2huvEze",
+        "youtubeId": "auq7gzZlKBE"
       }
     },
     {
       "day": 11,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 11",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 11. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "We are one",
+        "artist": "Pitbull",
+        "quote": "Es mi mundo, tu mundo, el mundo de nosotros",
+        "text": "Das Lied handelt davon, dass wir alle, indem wir gemeinsam auf dieser Welt leben, verbunden und eins sind. Besonders schön finde ich die oben zitierte Liedzeile: „Es ist meine Welt, deine Welt, unsere Welt“. Ich finde, wir sollten uns manchmal vor Augen führen, dass wir lediglich Bewohner und Bewohnerinnen dieser Erde sein dürfen, aber dass uns die Welt nicht gehört. Weder ich habe ein Recht auf Besitzanspruch, noch eine andere Person. Daher erscheint es mir wichtig, sich gelegentlich die Frage zu stellen, welchen Beitrag man selbst zur Welt leistet? Das kann auf die Umwelt bezogen sein, wie sehr man selbst auf Nachhaltigkeit oder Klimaschutz achtet. Man kann aber auch auf ganz andere Wege zu einer guten Welt beitragen, beispielsweise indem man seine Stimme bei Ungerechtigkeiten erhebt, einer anderen Person Liebe, Perspektive, Wertschätzung und Mut schenkt oder sich auf andere Weise aufrichtig engagiert. Für den heutigen Tag möchte ich dich daher ein bisschen zur Selbstreflexion anregen. Wie trägst du zur Welt bei?",
+        "spotifyId": "1PCvKFPWnTXAe2oaReVUcr",
+        "youtubeId": "TGtWWb9emYI"
       }
     },
     {
       "day": 12,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 12",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 12. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "Brave",
+        "artist": "Sara Bareilles",
+        "quote": "Say what you wanna say",
+        "text": "„In Worte fassen, nicht in Gedanken lassen.“ – Diesen Spruch versuche ich mir häufig zu Herzen zu nehmen. Denn wie oft ertappen wir uns dabei, eine Sache nicht anzusprechen, womöglich aus Gründen der Angst oder Scham? Ansprechen kostet manchmal Überwindung, aber manchmal kann das Nicht-Ansprechen sogar noch mehr belasten. Wie du ja weißt, erscheinen die Lieder dieses Adventkalenders jeden Tag in einer Zufalls-Reihenfolge. Vielleicht ist heute die Zeit gekommen, den Mut zu fassen und eine Sache anzusprechen, die du jemandem schon lange sagen wolltest. Das kann genauso auch ein Kompliment an eine nahestehende Person sein, der du schon lange nicht mehr gesagt hast, wie gern du sie hast und wie wertvoll sie ist. Nutze doch heute die Gelegenheit, Dinge in Worte zu fassen und sei neugierig, was dabei rauskommt! Viel Freude dabei!",
+        "spotifyId": "6Uy6K3KdmUdAfelUp0SeXn",
+        "youtubeId": "QUQsqBqxoR4"
       }
     },
     {
       "day": 13,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 13",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 13. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "Up & Up",
+        "artist": "Coldplay",
+        "quote": "Oh, see the forest there in every seed",
+        "text": "Ich finde diese Liedzeile ganz besonders. „Den Wald bereits in jedem Samen sehen“ – das bedeutet, das vollständige Potenzial wahrzunehmen, das bereits von Anfang an da ist. Weißt du, wie großartig du bist? Und dass du bereits alles in dir hast, was du brauchst, um aufzublühen? Ich habe in diesem Kontext einmal eine schöne Analogie gehört: So wie bereits im Samen der Rose das gesamte Potenzial der Blume steckt (also die gesamte Information über die bunte und duftende Blüte), so steckt auch in uns Menschen das gesamte Potenzial zum Aufblühen und Erstrahlen. Das bedeutet doch dann auch, dass wir von Geburt an bereits alles in uns tragen. Vielleicht geht es im Laufe unseres Lebens darum, unser Potenzial zu entfalten und in unserer Persönlichkeit zu reifen. Schaffe dir selbst den perfekten Nährboden und die besten Bedingungen für dein Wachstum und erblühe!",
+        "spotifyId": "31L9yLXSj6LpCFupyMV6CR",
+        "youtubeId": "BPNTC7uZYrI"
       }
     },
     {
       "day": 14,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 14",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 14. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "Fresh eyes",
+        "artist": "Andy Grammer",
+        "quote": "So suddenly, I’m in love with a stranger […] Now all I see is you with fresh eyes",
+        "text": "Dieses Lied catcht mich nicht nur mit einer wunderschönen Botschaft, sondern auch mit dem berührenden Musikvideo, das zeigt, dass in jedem Menschen ein Licht steckt. „Fresh eyes“, darunter verstehe ich Augen, die eine Strahlkraft besitzen und das Gegenüber durch das Leuchten der Begeisterung förmlich in den Bann ziehen. Man sagt nicht umsonst, die Augen sind das Tor zur Seele und verraten eine Menge über die Person dahinter. Ich bin der Überzeugung, dass jeder Mensch dieses Strahlen in sich trägt und eine spannende Lebensgeschichte oder -weisheit zu erzählen hat. Oft reicht es daher, eine Haltung von Neugierde und Gespanntheit an den Tag zu legen und zu warten, welchen neuen Menschen man während des Tages begegnet und welche spannenden Punkte sich während eines Gesprächs auftun. Sei doch heute mal mutig und gehe auf unbekannte Personen zu und entdecke mit Neugierde, welche Wunder sich ergeben!",
+        "spotifyId": "7gm2omqXDTaT4sS17hSu8T",
+        "youtubeId": "5bgemCaaQkU"
       }
     },
     {
       "day": 15,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 15",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 15. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "Live your beautiful life",
+        "artist": "Lights Follow",
+        "quote": "So don’t you let the sunlight go by without you; don’t you realize how lucky we are",
+        "text": "Für den Tag heute möchte ich dir eine kleine Aufgabe passend zum Song mitgeben: Sei achtsam während deines heutigen Tages und überlege dir im ersten Schritt: Wofür bist du dankbar? Es muss kein außergewöhnliches Ereignis geschehen, um Dankbarkeit empfinden zu können. Dankbarkeit kann zu jeder Zeit empfunden werden, bereits für die kleinsten Dinge, die wir immer als selbstverständlich hingenommen haben – beispielsweise für unsere Gesundheit, dass wir in einem sicheren Land leben, dass wir genug zu essen und trinken haben oder für unser bereicherndes soziales Umfeld. Überlege dir im zweiten Schritt: Was war dein Beitrag für den Moment der Dankbarkeit? Jetzt fragst du vielleicht, welchen Beitrag hat man überhaupt geleistet, wenn man etwa dankbar für den schönen Sonnenuntergang ist? – Ganz einfach: Dein Beitrag war, dir Zeit zu nehmen, um den Sonnenuntergang erst einmal anzuschauen und ihn bewusst zu genießen! Durch diese Zwei-Schritt-Methode wirst du merken, wie viel du selbst aktiv zu deinem Glücksempfinden beitragen kannst. Viel Freude dabei!",
+        "spotifyId": "1sbhWEajPRiSnJi75iXxq4",
+        "youtubeId": "1MRP_73ueeM"
       }
     },
     {
       "day": 16,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 16",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 16. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "Little Hollywood",
+        "artist": "alle Farben, Janieck",
+        "quote": "We got everything we need in our neighbourhood, no fancy cars, everything’s gonna be good",
+        "text": "„Einfach leben“ – das ist meiner Ansicht nach ein wunderbares Lebensmotto in dreierlei Hinsicht: Zum einen bedeutet das für mich soviel wie „Just do it“, also einfach leben und losstarten, anstatt sich unnötig oft den Kopf mit hypothetischen Situationen zu zerbrechen. Andererseits meine ich damit, es sich im Leben nicht noch extra schwer zu machen. Das Leben darf leicht sein, wir müssen unserem Ego nicht ständig beweisen, dass wir in der Lage wären, den härtesten aller Wege zu bewältigen. Ich finde, man darf es sich einfach machen. Und zum dritten verstehe ich unter „einfach leben“, dass man sein Leben einfach halten soll, im Sinne von simpel/basic/natürlich. Also dass man nicht unbedingt in großartigem Luxus oder großartiger Opulenz leben muss, um glücklich sein zu können. Genau diesen dritten Punkt verdeutlicht die oben genannte Liedzeile. Man kann sich das Leben immer schön machen, vor allem, indem man authentisch lebt. Auf welche Weise kannst du heute einfach leben?",
+        "spotifyId": "1f3flfdU4VDM2OBDD2FMia",
+        "youtubeId": "idVLI3s_CJo"
       }
     },
     {
       "day": 17,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 17",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 17. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "Halsschmerzen",
+        "artist": "Mael und Jonas",
+        "quote": "Ganz egal was du machst, aber mach es nicht halbherzig",
+        "text": "Die Dinge nicht halbherzig, sondern mit voller Begeisterung und mit Leib und Seele zu machen, das ist doch ein schönes Motto für den heutigen Tag! Jetzt fragst du dich vielleicht, macht das überhaupt einen Unterschied, sich anzustrengen und mehr Energie in eine Sache legen? Ich denke allemal! Ein lustiger Funfact soll das verdeutlichen: Wusstest du, dass manche Quallenarten bis zu 95% aus Wasser bestehen? Und wusstest du, dass auch Gurken bis zu 95% aus Wasser bestehen? Das heißt dann doch, dass lediglich 5% ausschlaggebend sind, ob wir von einem Meeresbewohner oder von einem Lebensmittel sprechen! Faszinierend, oder? Vielleicht motivieren dich diese Worte, dir heute eine Aufgabe oder ein Projekt zu suchen, das du aus vollem Herzen verfolgen möchtest. Und auch wenn es nur das Kochen von Spaghetti mit Tomatensoße ist, dann mach es aus ganzen Herzen! :)",
+        "spotifyId": "0tTCUgWATAj0ivm8qQbLaO",
+        "youtubeId": "wgB7v8DY9oU"
       }
     },
     {
       "day": 18,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 18",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 18. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "Up",
+        "artist": "Malik Harris",
+        "quote": "And no matter how big your doubts, you can always shut them down, if you just take a break to lower your doubts, there ain’t no need to be fearing these thunderclouds no more",
+        "text": "Heute soll es darum gehen, Sorgen und Zweifel aus einer kritischen Perspektive zu beleuchten. Denn sie können manchmal sehr unbegründet sein und uns von einem leichten, fröhlichen Leben abhalten. Sorgen und Zweifel sind gewissermaßen das Gegenteil von Vertrauen. Denn wenn wir uns permanent sorgen bzw. befürchten, es könnte etwas Schlimmes passieren, dann raubt das nicht nur viel Energie, sondern lässt uns misstrauisch beinahe allem gegenüber sein. Das Problematische ist, dass sich unbegründete Sorgen, Zweifel oder Ängste, wenn sie nicht hinsichtlich ihrer Sinnhaftigkeit überprüft werden, auch auf andere Bereiche ausdehnen können. Daher möchte ich dir heute – wie die Liedzeile bereits sagt – mitgeben, dass Sorgen oder Zweifel „nur“ Gedanken sind. Und Gedanken sind nicht immer gleich Realität. Wenn du jetzt an einen rosa Elefanten denkst, dann heißt das ja nicht, dass es ihn in der Realität gibt. Gedanken sind ein wertvolles Tool und wir können entscheiden, welche Gedanken wir denken möchten. Hinterfrage dich doch heute mal, welche (Selbst-)Zweifel oder Sorgen in deinem Leben vielleicht unbegründet sind und wie du sie loslassen könntest. (Es ist mir noch wichtig zu sagen, dass Sorgen oder Ängste manchmal auch begründet sind, da sie uns vor etwas schützen wollen. Unterscheide daher sorgfältig, wie (ir-)rational eine Sorge ist). Hab einen beschwingten, sorgenfreien Tag!",
+        "spotifyId": "760TKJismh271uyFmJ8u4C",
+        "youtubeId": "rkfOFw1ErgI"
       }
     },
     {
       "day": 19,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 19",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 19. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "Pumpin Blood",
+        "artist": "NONONO",
+        "quote": "You’re a catalyst to your happiness you know",
+        "text": "„Du bist der Katalysator für dein Glück“, heißt es in diesem Lied. Das ist doch mal eine super machtvolle Aussage, oder? In der Chemie versteht man unter Katalysatoren jene Stoffe, die eine Reaktion auslösen, ohne selbst verbraucht zu werden. In meinen Augen bedeutet die Liedzeile soviel wie: Du selbst bist der/die Impulsgeber/in deines Glücks und kannst es durch dein Tun und deine Geisteshaltung vermehren. Wenn jede/r also sprichwörtlich seines/ihres Glückes Schmied ist, wie kann ich dann gezielt mein eigenes Glücks- und Freudeempfinden erhöhen? Mir gefällt ganz besonders eine Metapher aus dem Buch „Füttere den weißen Wolf“. Dem Buch zufolge leben in uns zwei Wölfe: Der schwarze Wolf ist mit Angst, Ärger, Neid Hass oder Gier verbunden und der weiße Wolf verkörpert Eigenschaften wie Liebe, Güte, Großzügigkeit und Mitgefühl. Jetzt stellt sich die Frage, welcher Wolf Überhand gewinnt? Das Buch würde sagen, es gewinnt der Wolf, den du fütterst, also die Seite, der du Aufmerksamkeit schenkst. Wie kannst du den weißen Wolf füttern? Achte doch heute auf diene Energie. Von welchen Menschen bist du umgeben, wie sehr achtest du auf dich, wie ist dein eigener Umgang mit dir selbst, welche Emotionen sind dienlich, welche weniger?",
+        "spotifyId": "7ti4qMC7xYQeh1uRzj5XuM",
+        "youtubeId": "3j4I0PqNzKE"
       }
     },
     {
       "day": 20,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 20",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 20. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "Be kind",
+        "artist": "Zak Abel",
+        "quote": "In a world where you can be anything, I’ll be kind to you",
+        "text": "Dieses Lied ist ein wahrer Aufruf, die Freundlichkeit anderen Menschen gegenüber zu kultivieren. „In einer Welt, wo du alles sein kannst, sei nett“, so lautet die Botschaft des Songs. Freundliche Gesten kennen keine Grenzen – jede Person hat es verdient, nett behandelt zu werden, egal welche Weltanschauung, Religion, Geschlecht, Sexualität oder Identität. Setze dir doch heute zum Ziel, deinem Umfeld gegenüber besonders nett zu sein. Das geht auf vielfältige Weise: Indem du jemandem ein Kompliment machst, jemandem hilfst, deine Aufmerksamkeit schenkst oder ganz einfach nur, indem du jemandem ein Lächeln schenkst. Kleine Gesten haben oft große Wirkungen! Ich wünsche dir viel Freude dabei!",
+        "spotifyId": "5pE4OLVJh5rjaLERbUgBB2",
+        "youtubeId": "aaj08tCfsVw"
       }
     },
     {
       "day": 21,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 21",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 21. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "Enjoy",
+        "artist": "Tekno",
+        "quote": "Allow me to enjoy myself",
+        "text": "Dieses Lied handelt davon, sich selbst Gutes zu tun und das eigene Leben zu genießen – und das soll auch die Botschaft für den heutigen Tag sein. In der Psychologie würde man in diesem Zusammenhang von „Selbstfürsorge“ sprechen. Was ist damit gemeint? Meiner Auffassung nach geht es darum, sich mit Liebe zu behandeln und für sein eigenes körperliches und psychisches Wohlbefinden bzw. seine Gesundheit zu sorgen. Manchmal habe ich den Eindruck, dass wir viel strenger zu uns selbst sind als zu anderen – beispielsweise, indem wir hohe Ansprüche an uns selbst stellen und uns dabei wenig Nachsicht erlauben oder indem wir uns ständig für andere aufopfern und vielleicht sogar auf uns selbst vergessen. Das kann auf Dauer kontraproduktiv sein, denn zum einen vernachlässigen wir dadurch unsere eigenen Bedürfnisse und zum anderen lassen wir uns glauben, nicht so wertvoll wie andere zu sein.  Selbstfürsorge beginnt bei der Wahrnehmung unserer eigenen Bedürfnisse: Was brauche ich jetzt gerade, damit ich mich wohlfühle? Tut mir eine Sache gut? Was kann ich tun, um meinen eigenen „Tank“ aus Energiereserven wieder aufzufüllen? Erlaube es dir daher heute, dir Gutes zu tun und das Leben in vollen Zügen zu genießen! Ich wünsche dir viel Freude dabei!",
+        "spotifyId": "1LCy7LSknQSMxxflErjKqO",
+        "youtubeId": "vnaykXFFXgg"
       }
     },
     {
       "day": 22,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 22",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 22. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "Loslassen",
+        "artist": "Aaron, Esther Graf",
+        "quote": "Alles, was ich habe, schmeiß ich weg, lass ich los",
+        "text": "„Lerne loszulassen, es ist der Schlüssel zum Glück“ soll Buddha einst gesagt haben. In meinen Augen ist Loslassen ist eine Kunst für sich. Wer sich von festgefahrenen Vorstellungen, überhöhten Erwartungen, belastenden Situationen oder vergangenen Ereignissen lösen kann, erfährt dadurch oftmals Freiheit und Leichtigkeit. Mir gefällt folgende Metapher ganz besonders gut: Stell dir vor, deine Fäuste sind fest geballt, da du an einer Sache, Person oder fixen Vorstellung festhältst. Wie kannst du jemals etwas Neues empfangen oder offen sein für andere (möglicherweise bessere) Optionen öffnen, wenn du keine Hand frei hast? Loslassen öffnet deine Fäuste und macht dich empfänglich für die Geschenke, die das Universum bereitstellt. Wie du ja weißt, erscheinen die Lieder dieses Kalenders in einer Zufallsreihenfolge – und glauben wir an das Bisschen Magie, dass das Thema des täglichen Impulses etwas mit deinem aktuellen Leben zu tun hat. Gibt es eine Sache, die du heute loslassen kannst? Was hält dich aktuell zurück, ein leichtes, beschwingtes Leben voll Glück zu führen?",
+        "spotifyId": "0aAijKkUjRaQmWhZ8DBS84",
+        "youtubeId": "hKPxjoqeM9s"
       }
     },
     {
       "day": 23,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 23",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 23. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "Roar",
+        "artist": "Katy Perry",
+        "quote": "I got the eye of the tiger, a fighter, dancing through the fire ‘cause I am a champion",
+        "text": "Für heute möchte ich dir folgendes Motto mitgeben: Sei mutig! Das Leben ist dazu da, neue Dinge auszuprobieren und Erfahrungen zu sammeln! Was hat man davon, immer in der Komfortzone zu bleiben (abgesehen von einem berechenbaren Leben ohne sonderliche Höhenflüge)? Ich habe vor Kurzem ein schönes Zitat gehört, das mich sehr inspiriert hat: „Der sicherste Ort für ein Schiff ist der Hafen – doch dafür ist es nicht gebaut“. Was für eine schöne Metapher und zugleich Motivation, sich auch mal in unbekannte Gewässer zu wagen! Auch das heutige Lied unterstreicht die Message in meinen Augen perfekt. Es handelt davon, sich selbst zu ermutigen, also Dinge in die Hand zu nehmen und auch mal ein Risiko einzugehen, anstatt in der Komfortzone zu bleiben. In welcher Form kannst du heute Mut zeigen?",
+        "spotifyId": "27tNWlhdAryQY04Gb2ZhUI",
+        "youtubeId": "CevxZvSJLk8"
       }
     },
     {
       "day": 24,
-      "type": "text",
+      "type": "song",
       "payload": {
-        "title": "Platzhalter Türchen 24",
-        "quote": "Bald ist es so weit.",
-        "text": "Hier wartet das Türchen für den 24. Dezember 2026. Die Inhalte werden noch kuratiert — bis dahin: abwarten und Tee trinken."
+        "title": "Be right now",
+        "artist": "Ed Sheeran",
+        "quote": "Just stay here and be right now; nothing else matters",
+        "text": "Bevor du weiterliest, nimm doch bitte einen tiefen Atemzug, halte kurz inne und beantworte dir folgende Fragen: Wie fühlt sich mein Körper jetzt gerade, in diesem Moment, an? Was spüre ich? Wie geht es mir gerade? Heute soll es um das Thema Achtsamkeit gehen und – herzlichen Glückwunsch – du hast soeben im Zuge der kurzen Übung Achtsamkeit praktiziert! Unter Achtsamkeit versteht man per Definition die bewusste Wahrnehmung des gegenwärtigen Moments ohne Bewertung. Das bedeutet konkret: Du nimmst alles rund um dich und in dir selbst wahr, urteilst aber nicht darüber oder teilst es in „gut“ und „schlecht“ ein. Denn tatsächlich ist der gegenwärtige Moment weder gut noch schlecht, sondern er ist einfach. Achtsamkeit heißt, einen Raum zwischen Reiz und Reaktion zu schaffen, anstatt impulsiv und unkontrolliert auf die Umstände zu reagieren. Durch das regelmäßige Praktizieren von Achtsamkeit kann es gelingen, immer wieder Erholungspausen zu schaffen und sich nicht von unerwarteten Ereignissen oder Emotionen übermannen zu lassen. Nimm dir doch heute mehrmals bewusst während des Tages einen Moment des Innehaltens und sei – wie es auch das heutige Lied beschreibt – im Hier und Jetzt.",
+        "spotifyId": "3BiiSLo0wyHAY7lpCEO6ge",
+        "youtubeId": "mqjoCX4OU0w"
       }
     }
   ]
